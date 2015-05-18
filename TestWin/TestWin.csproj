@@ -188,14 +188,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GdalConfiguration.vb" />
+    <Content Include="GdalNativeConfiguration.vb" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\IO\IO.csproj">
       <Project>{7ef58ec4-42ee-4fd9-a04b-410a32fe6c00}</Project>
       <Name>IO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="GdalConfiguration.vb" />
-    <Content Include="GdalNativeConfiguration.vb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

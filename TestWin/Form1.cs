@@ -37,7 +37,7 @@ namespace TestWin
             if (testFile.Exists)
             {
                 var testArchive = new System.IO.Compression.ZipArchive(testFile.OpenRead());
-                var gtfs = new IO.GTFS(testArchive);
+                var gtfs = new GTFSTools.IO.GTFS(testArchive);
                 var layerStops = new SharpMap.Layers.VectorLayer("Stops");
                 var layerPaths = new SharpMap.Layers.VectorLayer("Paths");
 
@@ -80,7 +80,8 @@ namespace TestWin
                 mapBox1.Map.Layers.Add(layerPaths);
                 mapBox1.Map.Layers.Add(layerStops);
                 mapBox1.Map.ZoomToExtents();
-                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.OsmTileSource(), "OSM"));
+                //mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.OsmTileSource(), "OSM"));
+                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.GoogleTileSource(BruTile.Web.GoogleMapType.GoogleMap), "Google"));
                 mapBox1.Refresh();
                 mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
             }
