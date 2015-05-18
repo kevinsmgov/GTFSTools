@@ -7,8 +7,8 @@
     <ProjectGuid>{7EF58EC4-42EE-4FD9-A04B-410A32FE6C00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IO</RootNamespace>
-    <AssemblyName>IO</AssemblyName>
+    <RootNamespace>GTFSTools.IO</RootNamespace>
+    <AssemblyName>GTFSTools.IO</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
