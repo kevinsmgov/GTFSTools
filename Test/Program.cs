@@ -13,14 +13,21 @@ namespace Test
             var testFile = new System.IO.FileInfo("test.zip");
             if (testFile.Exists)
             {
-                var testArchive = new System.IO.Compression.ZipArchive(testFile.OpenRead());
-                var gtfs = new GTFSTools.IO.GTFS(testArchive);
+                var inputArchive = new System.IO.Compression.ZipArchive(testFile.OpenRead(), System.IO.Compression.ZipArchiveMode.Read);
+                var gtfs = new GTFSTools.IO.GTFS(inputArchive);
                 foreach (var trip in gtfs.DataSet._trips_txt)
                 {
-                    Console.WriteLine("{0}, {1}", trip, trip._Getstop_times_txtRows().Count());
-                    foreach (var stop_time in trip._Getstop_times_txtRows())
+                    Console.WriteLine("{0}, {1}", trip.trip_id, trip._Getstop_times_txtRows().Count());
+                    //foreach (var stop_time in trip._Getstop_times_txtRows())
+                    //{
+                    //    Console.WriteLine("{0}, {1}", stop_time.stop_sequence, stop_time.Isarrival_timeNull() ? (TimeSpan?)null : stop_time.arrival_time);
+                    //}
+                }
+                using (var outputFile = System.IO.File.Create("test2.zip"))
+                {
+                    using (var outputArchive = new System.IO.Compression.ZipArchive(outputFile, System.IO.Compression.ZipArchiveMode.Create))
                     {
-                        Console.WriteLine("{0}, {1}", stop_time.stop_sequence, stop_time.Isarrival_timeNull() ? (DateTime?)null : stop_time.arrival_time);
+                        gtfs.Write(outputArchive);
                     }
                 }
             }

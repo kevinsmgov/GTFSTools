@@ -23,6 +23,17 @@ namespace GTFSTools.IO
                 }
             }
         }
+        public void Write(System.IO.Compression.ZipArchive zipArchive)
+        {
+            foreach(System.Data.DataTable table in this.DataSet.Tables)
+            {
+                if (table.Rows.Count > 0)
+                {
+                    var entry = zipArchive.CreateEntry(table.TableName);
+                    table.WriteCSV(entry.Open());
+                }
+            }
+        }
         public GTFSDataSet DataSet { get; set; }
     }
 }

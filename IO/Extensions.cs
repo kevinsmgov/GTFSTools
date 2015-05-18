@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace GTFSTools.IO
@@ -10,6 +11,7 @@ namespace GTFSTools.IO
     {
         public static void ReadCSV(this System.Data.DataTable datatable, System.IO.Stream stream)
         {
+            var timeSpanExpression = new Regex("^([0-9]{2}):([0-9]{2}):([0-9]{2})");
             Console.Write("table = {0}", datatable.TableName);
             datatable.BeginLoadData();
             using (var parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(stream))
@@ -67,6 +69,15 @@ namespace GTFSTools.IO
                                 case "String":
                                     newRow[index] = dataString;
                                     break;
+                                case "TimeSpan":
+                                    {
+                                        var match = timeSpanExpression.Match(dataString);
+                                        if (match.Success)
+                                        {
+                                            newRow[index] = new TimeSpan(Convert.ToInt32(match.Groups[1].Value), Convert.ToInt32(match.Groups[2].Value), Convert.ToInt32(match.Groups[3].Value));
+                                        }
+                                    }
+                                    break;
                                 default:
                                     break;
                             }
@@ -76,6 +87,68 @@ namespace GTFSTools.IO
                 }
             }
             datatable.EndLoadData();
+            Console.WriteLine("\trows = {0}", datatable.Rows.Count);
+        }
+        public static void WriteCSV(this System.Data.DataTable datatable, System.IO.Stream stream)
+        {
+            Console.Write("table = {0}", datatable.TableName);
+            using (var writer = new System.IO.StreamWriter(stream))
+            {
+                var header = String.Join(",",datatable.Columns.OfType<System.Data.DataColumn>().Select(item=>item.ColumnName));
+                writer.WriteLine(header);
+                foreach (System.Data.DataRow row in datatable.Rows)
+                {
+                    var buffer = new String[datatable.Columns.Count];
+                    for (var index = 0; index < datatable.Columns.Count; index++)
+                    {
+                        var column = datatable.Columns[index];
+                        if (!row.IsNull(index))
+                        {
+                            switch (column.DataType.Name)
+                            {
+                                case "Boolean":
+                                    buffer[index] = (Boolean)row[index] ? "1" : "0";
+                                    break;
+                                case "DateTime":
+                                    buffer[index] = String.Format("{0:yyyyMMdd}", row[index]);
+                                    break;
+                                case "Decimal":
+                                    buffer[index] = String.Format("{0:0.0000000}", row[index]);
+                                    break;
+                                case "Double":
+                                    buffer[index] = String.Format("{0}", row[index]);
+                                    break;
+                                case "Int32":
+                                    buffer[index] = String.Format("{0}", row[index]);
+                                    break;
+                                case "String":
+                                    buffer[index] = (String)row[index];
+                                    break;
+                                case "TimeSpan":
+                                    {
+                                        var value = (TimeSpan)row[index];
+                                        var hours = Convert.ToInt32(Math.Floor(value.TotalHours));
+                                        var minutes = value.Minutes;
+                                        var seconds = value.Seconds;
+                                        buffer[index] = String.Format("{0,2:D2}:{1,2:D2}:{2,2:D2}", hours, minutes, seconds);
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
+                            if (buffer[index].Contains(',') || buffer[index].Contains('"'))
+                            {
+                                if (buffer[index].Contains('"'))
+                                    buffer[index] = buffer[index].Replace("\"", "\"\"");
+                                buffer[index] = "\"" + buffer[index] + "\"";
+                            }
+                        }
+                        else
+                            buffer[index] = String.Empty;
+                    }
+                    writer.WriteLine(String.Join(",", buffer));
+                }
+            }
             Console.WriteLine("\trows = {0}", datatable.Rows.Count);
         }
     }

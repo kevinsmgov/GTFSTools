@@ -2484,7 +2484,7 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _stop_times_txtRow Add_stop_times_txtRow(_trips_txtRow _parent_trips_txtRowBytrips_txt_stop_times_txt, System.DateTime arrival_time, System.DateTime departure_time, _stops_txtRow _parent_stops_txtRowBystops_txt_stop_times_txt, int stop_sequence, string stop_headsign, string pickup_type, string drop_off_type, string shape_dist_traveled, string timepoint) {
+            public _stop_times_txtRow Add_stop_times_txtRow(_trips_txtRow _parent_trips_txtRowBytrips_txt_stop_times_txt, System.TimeSpan arrival_time, System.TimeSpan departure_time, _stops_txtRow _parent_stops_txtRowBystops_txt_stop_times_txt, int stop_sequence, string stop_headsign, string pickup_type, string drop_off_type, string shape_dist_traveled, string timepoint) {
                 _stop_times_txtRow row_stop_times_txtRow = ((_stop_times_txtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2550,9 +2550,9 @@ namespace GTFSTools.IO {
             private void InitClass() {
                 this.columntrip_id = new global::System.Data.DataColumn("trip_id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntrip_id);
-                this.columnarrival_time = new global::System.Data.DataColumn("arrival_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnarrival_time = new global::System.Data.DataColumn("arrival_time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnarrival_time);
-                this.columndeparture_time = new global::System.Data.DataColumn("departure_time", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndeparture_time = new global::System.Data.DataColumn("departure_time", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndeparture_time);
                 this.columnstop_id = new global::System.Data.DataColumn("stop_id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstop_id);
@@ -6335,10 +6335,10 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime arrival_time {
+            public System.TimeSpan arrival_time {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this._tablestop_times_txt.arrival_timeColumn]));
+                        return ((global::System.TimeSpan)(this[this._tablestop_times_txt.arrival_timeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'arrival_time\' in table \'stop_times.txt\' is DBNull.", e);
@@ -6351,10 +6351,10 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime departure_time {
+            public System.TimeSpan departure_time {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this._tablestop_times_txt.departure_timeColumn]));
+                        return ((global::System.TimeSpan)(this[this._tablestop_times_txt.departure_timeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'departure_time\' in table \'stop_times.txt\' is DBNull.", e);
