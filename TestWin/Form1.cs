@@ -33,63 +33,53 @@ namespace TestWin
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var testFile = new System.IO.FileInfo("test.zip");
-            if (testFile.Exists)
+            var gtfs = new GTFSTools.IO.GTFS("test.zip");
+            var layerStops = new SharpMap.Layers.VectorLayer("Stops");
+            var layerPaths = new SharpMap.Layers.VectorLayer("Paths");
+
+            var featurePath = new SharpMap.Data.FeatureDataTable();
+            featurePath.Columns.Add("strokeColor");
+            var featureStops = new SharpMap.Data.FeatureDataTable();
+
+            var geometryFactory = new NetTopologySuite.Geometries.GeometryFactory();
+
+            foreach (var path in gtfs.DataSet._shapes_txt.GroupBy(item => item.shape_id).GroupJoin(gtfs.DataSet._trips_txt, outer => outer.Key, inner => inner.shape_id, (outer, inner) => new { shape_id = outer.Key, route_color = inner.First()._routes_txtRow.Isroute_colorNull() ? "000000" : inner.First()._routes_txtRow.route_color, points = outer.OrderBy(item => item.shape_pt_sequence) }))
             {
-                var testArchive = new System.IO.Compression.ZipArchive(testFile.OpenRead());
-                var gtfs = new GTFSTools.IO.GTFS(testArchive);
-                var layerStops = new SharpMap.Layers.VectorLayer("Stops");
-                var layerPaths = new SharpMap.Layers.VectorLayer("Paths");
-
-                var featurePath = new SharpMap.Data.FeatureDataTable();
-                featurePath.Columns.Add("strokeColor");
-                var featureStops = new SharpMap.Data.FeatureDataTable();
-
-                var geometryFactory = new NetTopologySuite.Geometries.GeometryFactory();
-
-                foreach (var path in gtfs.DataSet._shapes_txt.GroupBy(item => item.shape_id).Select(group => new { shape_id = group.Key, route_color = group.First()._Gettrips_txtRows().First()._routes_txtRow.Isroute_colorNull() ? "000000" : group.First()._Gettrips_txtRows().First()._routes_txtRow.route_color, points = group.OrderBy(item => item.shape_pt_sequence) }))
+                var coordinates = new Collection<GeoAPI.Geometries.Coordinate>();
+                foreach (var point in path.points)
                 {
-                    var coordinates = new Collection<GeoAPI.Geometries.Coordinate>();
-                    foreach (var point in path.points)
-                    {
-                        var coordinate = new GeoAPI.Geometries.Coordinate(Convert.ToDouble(point.shape_pt_lon), Convert.ToDouble(point.shape_pt_lat));
-                        coordinates.Add(coordinate);
-                    }
-                    var newFeatureRow = featurePath.NewRow();
-                    newFeatureRow.Geometry = geometryFactory.CreateLineString(coordinates.ToArray());
-                    newFeatureRow.ItemArray = new Object[] { path.route_color };
-                    featurePath.AddRow(newFeatureRow);
+                    var coordinate = new GeoAPI.Geometries.Coordinate(Convert.ToDouble(point.shape_pt_lon), Convert.ToDouble(point.shape_pt_lat));
+                    coordinates.Add(coordinate);
                 }
-                layerPaths.DataSource = new SharpMap.Data.Providers.GeometryFeatureProvider(featurePath);
-                layerPaths.Theme = new SharpMap.Rendering.Thematics.CustomTheme(GetPathStyle);
-
-                foreach (var stops_txt in gtfs.DataSet._stops_txt)
-                {
-                    var newFeatureRow = featureStops.NewRow();
-                    newFeatureRow.Geometry = geometryFactory.CreatePoint(new GeoAPI.Geometries.Coordinate(Convert.ToDouble(stops_txt.stop_lon), Convert.ToDouble(stops_txt.stop_lat)));
-                    featureStops.AddRow(newFeatureRow);
-                }
-                layerStops.DataSource = new SharpMap.Data.Providers.GeometryFeatureProvider(featureStops);
-                layerStops.Theme = new SharpMap.Rendering.Thematics.CustomTheme(GetStopStyle);
-
-                var ctFact = new ProjNet.CoordinateSystems.Transformations.CoordinateTransformationFactory();
-                layerPaths.CoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84, ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator);
-                layerPaths.ReverseCoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator, ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84);
-                layerStops.CoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84, ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator);
-                layerStops.ReverseCoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator, ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84);
-                mapBox1.Map.Layers.Add(layerPaths);
-                mapBox1.Map.Layers.Add(layerStops);
-                mapBox1.Map.ZoomToExtents();
-                //mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.OsmTileSource(), "OSM"));
-                mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.GoogleTileSource(BruTile.Web.GoogleMapType.GoogleMap), "Google"));
-                mapBox1.Refresh();
-                mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
+                var newFeatureRow = featurePath.NewRow();
+                newFeatureRow.Geometry = geometryFactory.CreateLineString(coordinates.ToArray());
+                newFeatureRow.ItemArray = new Object[] { path.route_color };
+                featurePath.AddRow(newFeatureRow);
             }
-        }
+            layerPaths.DataSource = new SharpMap.Data.Providers.GeometryFeatureProvider(featurePath);
+            layerPaths.Theme = new SharpMap.Rendering.Thematics.CustomTheme(GetPathStyle);
 
-        private void mapBox1_MouseDrag(GeoAPI.Geometries.Coordinate worldPos, MouseEventArgs imagePos)
-        {
+            foreach (var stops_txt in gtfs.DataSet._stops_txt)
+            {
+                var newFeatureRow = featureStops.NewRow();
+                newFeatureRow.Geometry = geometryFactory.CreatePoint(new GeoAPI.Geometries.Coordinate(Convert.ToDouble(stops_txt.stop_lon), Convert.ToDouble(stops_txt.stop_lat)));
+                featureStops.AddRow(newFeatureRow);
+            }
+            layerStops.DataSource = new SharpMap.Data.Providers.GeometryFeatureProvider(featureStops);
+            layerStops.Theme = new SharpMap.Rendering.Thematics.CustomTheme(GetStopStyle);
 
+            var ctFact = new ProjNet.CoordinateSystems.Transformations.CoordinateTransformationFactory();
+            layerPaths.CoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84, ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator);
+            layerPaths.ReverseCoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator, ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84);
+            layerStops.CoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84, ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator);
+            layerStops.ReverseCoordinateTransformation = ctFact.CreateFromCoordinateSystems(ProjNet.CoordinateSystems.ProjectedCoordinateSystem.WebMercator, ProjNet.CoordinateSystems.GeographicCoordinateSystem.WGS84);
+            mapBox1.Map.Layers.Add(layerPaths);
+            mapBox1.Map.Layers.Add(layerStops);
+            mapBox1.Map.ZoomToExtents();
+            //mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.OsmTileSource(), "OSM"));
+            mapBox1.Map.BackgroundLayer.Add(new SharpMap.Layers.TileAsyncLayer(new BruTile.Web.GoogleTileSource(BruTile.Web.GoogleMapType.GoogleMap), "Google"));
+            mapBox1.Refresh();
+            mapBox1.ActiveTool = SharpMap.Forms.MapBox.Tools.Pan;
         }
     }
 }

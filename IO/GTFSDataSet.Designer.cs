@@ -72,8 +72,6 @@ namespace GTFSTools.IO {
         
         private global::System.Data.DataRelation _relationstops_txt_transfers_txt_to;
         
-        private global::System.Data.DataRelation _relationshapes_txt_trips_txt;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -517,7 +515,6 @@ namespace GTFSTools.IO {
             this._relationtrips_txt_frequencies_txt = this.Relations["trips.txt_frequencies.txt"];
             this._relationstops_txt_transfers_txt_from = this.Relations["stops.txt_transfers.txt_from"];
             this._relationstops_txt_transfers_txt_to = this.Relations["stops.txt_transfers.txt_to"];
-            this._relationshapes_txt_trips_txt = this.Relations["shapes.txt_trips.txt"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -598,10 +595,6 @@ namespace GTFSTools.IO {
                         this._tablestops_txt.stop_idColumn}, new global::System.Data.DataColumn[] {
                         this._tabletransfers_txt.to_stop_idColumn}, false);
             this.Relations.Add(this._relationstops_txt_transfers_txt_to);
-            this._relationshapes_txt_trips_txt = new global::System.Data.DataRelation("shapes.txt_trips.txt", new global::System.Data.DataColumn[] {
-                        this._tableshapes_txt.shape_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.shape_idColumn}, false);
-            this.Relations.Add(this._relationshapes_txt_trips_txt);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2087,7 +2080,7 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _trips_txtRow Add_trips_txtRow(_routes_txtRow _parent_routes_txtRowByroutes_txt_trips_txt, _calendar_txtRow _parent_calendar_txtRowBycalendar_txt_trips_txt, string trip_id, string trip_headsign, string trip_short_name, string direction_id, string block_id, _shapes_txtRow _parent_shapes_txtRowByshapes_txt_trips_txt, string wheelchair_accessible, string bikes_allowed) {
+            public _trips_txtRow Add_trips_txtRow(_routes_txtRow _parent_routes_txtRowByroutes_txt_trips_txt, _calendar_txtRow _parent_calendar_txtRowBycalendar_txt_trips_txt, string trip_id, string trip_headsign, string trip_short_name, string direction_id, string block_id, string shape_id, string wheelchair_accessible, string bikes_allowed) {
                 _trips_txtRow row_trips_txtRow = ((_trips_txtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2097,7 +2090,7 @@ namespace GTFSTools.IO {
                         trip_short_name,
                         direction_id,
                         block_id,
-                        null,
+                        shape_id,
                         wheelchair_accessible,
                         bikes_allowed};
                 if ((_parent_routes_txtRowByroutes_txt_trips_txt != null)) {
@@ -2105,9 +2098,6 @@ namespace GTFSTools.IO {
                 }
                 if ((_parent_calendar_txtRowBycalendar_txt_trips_txt != null)) {
                     columnValuesArray[1] = _parent_calendar_txtRowBycalendar_txt_trips_txt[0];
-                }
-                if ((_parent_shapes_txtRowByshapes_txt_trips_txt != null)) {
-                    columnValuesArray[7] = _parent_shapes_txtRowByshapes_txt_trips_txt[0];
                 }
                 row_trips_txtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_trips_txtRow);
@@ -6192,17 +6182,6 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _shapes_txtRow _shapes_txtRow {
-                get {
-                    return ((_shapes_txtRow)(this.GetParentRow(this.Table.ParentRelations["shapes.txt_trips.txt"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["shapes.txt_trips.txt"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Istrip_headsignNull() {
                 return this.IsNull(this._tabletrips_txt.trip_headsignColumn);
             }
@@ -7151,17 +7130,6 @@ namespace GTFSTools.IO {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setshape_dist_traveledNull() {
                 this[this._tableshapes_txt.shape_dist_traveledColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _trips_txtRow[] _Gettrips_txtRows() {
-                if ((this.Table.ChildRelations["shapes.txt_trips.txt"] == null)) {
-                    return new _trips_txtRow[0];
-                }
-                else {
-                    return ((_trips_txtRow[])(base.GetChildRows(this.Table.ChildRelations["shapes.txt_trips.txt"])));
-                }
             }
         }
         

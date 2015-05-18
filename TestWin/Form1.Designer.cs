@@ -52,7 +52,6 @@
             this.mapBox1.TabIndex = 0;
             this.mapBox1.Text = "mapBox1";
             this.mapBox1.WheelZoomMagnitude = -2D;
-            this.mapBox1.MouseDrag += new SharpMap.Forms.MapBox.MouseEventHandler(this.mapBox1_MouseDrag);
             // 
             // Form1
             // 
