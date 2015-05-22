@@ -92,7 +92,7 @@ namespace GTFSTools.IO
                 directoryInfo.Create();
             foreach (System.Data.DataTable table in this.DataSet.Tables)
             {
-                if (table.Rows.Count > 0)
+                if (table.TableName.EndsWith(".txt") && table.Rows.Count > 0)
                 {
                     using (var destination = System.IO.File.Create(System.IO.Path.Combine(directoryInfo.FullName, table.TableName)))
                     {
@@ -105,7 +105,7 @@ namespace GTFSTools.IO
         {
             foreach (System.Data.DataTable table in this.DataSet.Tables)
             {
-                if (table.Rows.Count > 0)
+                if (table.TableName.EndsWith(".txt") && table.Rows.Count > 0)
                 {
                     var destination = zipArchive.CreateEntry(table.TableName);
                     table.WriteCSV(destination.Open());
@@ -117,8 +117,10 @@ namespace GTFSTools.IO
             if (System.IO.Path.GetExtension(path).ToLower().Equals(".zip"))
             {
                 var fileInfo = new System.IO.FileInfo(path);
-                var zipArchive = new System.IO.Compression.ZipArchive(fileInfo.Create(), System.IO.Compression.ZipArchiveMode.Create);
-                this.Write(zipArchive);
+                using (var zipArchive = new System.IO.Compression.ZipArchive(fileInfo.Create(), System.IO.Compression.ZipArchiveMode.Create))
+                {
+                    this.Write(zipArchive);
+                }
             }
             else
             {
