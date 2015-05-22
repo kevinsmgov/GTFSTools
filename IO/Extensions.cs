@@ -13,7 +13,6 @@ namespace GTFSTools.IO
         {
             var timeSpanExpression = new Regex("^([0-9]{2}):([0-9]{2}):([0-9]{2})");
             Console.Write("table = {0}", datatable.TableName);
-            datatable.BeginLoadData();
             using (var parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(stream))
             {
                 parser.TextFieldType = Microsoft.VisualBasic.FileIO.FieldType.Delimited;
@@ -86,7 +85,6 @@ namespace GTFSTools.IO
                     datatable.Rows.Add(newRow);
                 }
             }
-            datatable.EndLoadData();
             Console.WriteLine("\trows = {0}", datatable.Rows.Count);
         }
         public static void WriteCSV(this System.Data.DataTable datatable, System.IO.Stream stream)

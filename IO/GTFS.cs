@@ -8,6 +8,19 @@ namespace GTFSTools.IO
 {
     public class GTFS
     {
+        protected void PopulateJunctions()
+        {
+            this.DataSet.blocks.Clear();
+            foreach (var block_id in this.DataSet._trips_txt.GroupBy(item => item.block_id).Select(group => group.Key))
+            {
+                this.DataSet.blocks.AddblocksRow(block_id);
+            }
+            this.DataSet.paths.Clear();
+            foreach (var shape_id in this.DataSet._shapes_txt.GroupBy(item => item.shape_id).Select(group => group.Key))
+            {
+                this.DataSet.paths.AddpathsRow(shape_id);
+            }
+        }
         public GTFS()
         {
             this.DataSet = new GTFSDataSet();
@@ -29,6 +42,7 @@ namespace GTFSTools.IO
         }
         public void Read(System.IO.DirectoryInfo directoryInfo)
         {
+            this.DataSet.Tables.OfType<System.Data.DataTable>().ToList().ForEach(table => table.BeginLoadData());
             foreach (var source in directoryInfo.GetFiles())
             {
                 if (this.DataSet.Tables.Contains(source.Name))
@@ -36,9 +50,12 @@ namespace GTFSTools.IO
                     this.DataSet.Tables[source.Name].ReadCSV(source.OpenRead());
                 }
             }
+            PopulateJunctions();
+            this.DataSet.Tables.OfType<System.Data.DataTable>().ToList().ForEach(table => table.EndLoadData());
         }
         public void Read(System.IO.Compression.ZipArchive zipArchive)
         {
+            this.DataSet.Tables.OfType<System.Data.DataTable>().ToList().ForEach(table => table.BeginLoadData());
             foreach (var source in zipArchive.Entries)
             {
                 if (this.DataSet.Tables.Contains(source.Name))
@@ -46,6 +63,8 @@ namespace GTFSTools.IO
                     this.DataSet.Tables[source.Name].ReadCSV(source.Open());
                 }
             }
+            PopulateJunctions();
+            this.DataSet.Tables.OfType<System.Data.DataTable>().ToList().ForEach(table => table.EndLoadData());
         }
         public void Read(String path)
         {
