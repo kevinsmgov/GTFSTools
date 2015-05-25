@@ -52,9 +52,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GTFSDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GTFSLookupTables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GTFSLookupTables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LookupTables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="GTFSDataSet.xsc">
       <DependentUpon>GTFSDataSet.xsd</DependentUpon>
     </None>
@@ -65,6 +72,23 @@
     </None>
     <None Include="GTFSDataSet.xss">
       <DependentUpon>GTFSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GTFSLookupTables.xsc">
+      <DependentUpon>GTFSLookupTables.xsd</DependentUpon>
+    </None>
+    <None Include="GTFSLookupTables.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GTFSLookupTables.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GTFSLookupTables.xss">
+      <DependentUpon>GTFSLookupTables.xsd</DependentUpon>
+    </None>
+    <None Include="languages.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="time_zones.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

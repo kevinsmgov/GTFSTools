@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GTFSLookupTables" targetNamespace="http://tempuri.org/GTFSLookupTables.xsd" xmlns:mstns="http://tempuri.org/GTFSLookupTables.xsd" xmlns="http://tempuri.org/GTFSLookupTables.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GTFSLookupTables" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="GTFSLookupTables" msprop:Generator_UserDSName="GTFSLookupTables">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="time_zone" msprop:Generator_TableClassName="time_zoneDataTable" msprop:Generator_TableVarName="tabletime_zone" msprop:Generator_TablePropName="time_zone" msprop:Generator_RowDeletingName="time_zoneRowDeleting" msprop:Generator_RowChangingName="time_zoneRowChanging" msprop:Generator_RowEvHandlerName="time_zoneRowChangeEventHandler" msprop:Generator_RowDeletedName="time_zoneRowDeleted" msprop:Generator_UserTableName="time_zone" msprop:Generator_RowChangedName="time_zoneRowChanged" msprop:Generator_RowEvArgName="time_zoneRowChangeEvent" msprop:Generator_RowClassName="time_zoneRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CC" msprop:Generator_ColumnVarNameInTable="columnCC" msprop:Generator_ColumnPropNameInRow="CC" msprop:Generator_ColumnPropNameInTable="CCColumn" msprop:Generator_UserColumnName="CC" type="xs:string" minOccurs="0" />
+              <xs:element name="Coordinates" msprop:Generator_ColumnVarNameInTable="columnCoordinates" msprop:Generator_ColumnPropNameInRow="Coordinates" msprop:Generator_ColumnPropNameInTable="CoordinatesColumn" msprop:Generator_UserColumnName="Coordinates" type="xs:string" minOccurs="0" />
+              <xs:element name="TZ" msprop:Generator_ColumnVarNameInTable="columnTZ" msprop:Generator_ColumnPropNameInRow="TZ" msprop:Generator_ColumnPropNameInTable="TZColumn" msprop:Generator_UserColumnName="TZ" type="xs:string" minOccurs="0" />
+              <xs:element name="UTC_x0020_offset" msprop:Generator_ColumnVarNameInTable="columnUTC_offset" msprop:Generator_ColumnPropNameInRow="UTC_offset" msprop:Generator_ColumnPropNameInTable="UTC_offsetColumn" msprop:Generator_UserColumnName="UTC offset" type="xs:string" minOccurs="0" />
+              <xs:element name="UTC_x0020_DST_x0020_Offset" msprop:Generator_ColumnVarNameInTable="columnUTC_DST_Offset" msprop:Generator_ColumnPropNameInRow="UTC_DST_Offset" msprop:Generator_ColumnPropNameInTable="UTC_DST_OffsetColumn" msprop:Generator_UserColumnName="UTC DST Offset" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="language" msprop:Generator_TableClassName="languageDataTable" msprop:Generator_TableVarName="tablelanguage" msprop:Generator_RowChangedName="languageRowChanged" msprop:Generator_TablePropName="language" msprop:Generator_RowDeletingName="languageRowDeleting" msprop:Generator_RowChangingName="languageRowChanging" msprop:Generator_RowEvHandlerName="languageRowChangeEventHandler" msprop:Generator_RowDeletedName="languageRowDeleted" msprop:Generator_RowClassName="languageRow" msprop:Generator_UserTableName="language" msprop:Generator_RowEvArgName="languageRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ISO_x0020_639-1_x0020_Code" msprop:Generator_ColumnVarNameInTable="_columnISO_639_1_Code" msprop:Generator_ColumnPropNameInRow="_ISO_639_1_Code" msprop:Generator_ColumnPropNameInTable="_ISO_639_1_CodeColumn" msprop:Generator_UserColumnName="ISO 639-1 Code" type="xs:string" minOccurs="0" />
+              <xs:element name="English_x0020_name_x0020_of_x0020_Language" msprop:Generator_ColumnVarNameInTable="columnEnglish_name_of_Language" msprop:Generator_ColumnPropNameInRow="English_name_of_Language" msprop:Generator_ColumnPropNameInTable="English_name_of_LanguageColumn" msprop:Generator_UserColumnName="English name of Language" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="location_type" msprop:Generator_TableClassName="location_typeDataTable" msprop:Generator_TableVarName="tablelocation_type" msprop:Generator_TablePropName="location_type" msprop:Generator_RowDeletingName="location_typeRowDeleting" msprop:Generator_RowChangingName="location_typeRowChanging" msprop:Generator_RowEvHandlerName="location_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="location_typeRowDeleted" msprop:Generator_UserTableName="location_type" msprop:Generator_RowChangedName="location_typeRowChanged" msprop:Generator_RowEvArgName="location_typeRowChangeEvent" msprop:Generator_RowClassName="location_typeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="Display" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wheelchair_boarding" msprop:Generator_TableClassName="wheelchair_boardingDataTable" msprop:Generator_TableVarName="tablewheelchair_boarding" msprop:Generator_TablePropName="wheelchair_boarding" msprop:Generator_RowDeletingName="wheelchair_boardingRowDeleting" msprop:Generator_RowChangingName="wheelchair_boardingRowChanging" msprop:Generator_RowEvHandlerName="wheelchair_boardingRowChangeEventHandler" msprop:Generator_RowDeletedName="wheelchair_boardingRowDeleted" msprop:Generator_UserTableName="wheelchair_boarding" msprop:Generator_RowChangedName="wheelchair_boardingRowChanged" msprop:Generator_RowEvArgName="wheelchair_boardingRowChangeEvent" msprop:Generator_RowClassName="wheelchair_boardingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="Display" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

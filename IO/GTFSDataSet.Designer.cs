@@ -56,23 +56,23 @@ namespace GTFSTools.IO {
         
         private global::System.Data.DataRelation _relationagency_txt_routes_txt;
         
-        private global::System.Data.DataRelation _relationFK_paths_trips_txt;
-        
-        private global::System.Data.DataRelation _relationcalendar_txt_trips_txt;
+        private global::System.Data.DataRelation _relationFK_DataTable1_trips_txt;
         
         private global::System.Data.DataRelation _relationroutes_txt_trips_txt;
         
-        private global::System.Data.DataRelation _relationFK_DataTable1_trips_txt;
+        private global::System.Data.DataRelation _relationcalendar_txt_trips_txt;
         
-        private global::System.Data.DataRelation _relationstops_txt_stop_times_txt;
+        private global::System.Data.DataRelation _relationFK_paths_trips_txt;
         
         private global::System.Data.DataRelation _relationtrips_txt_stop_times_txt;
         
+        private global::System.Data.DataRelation _relationstops_txt_stop_times_txt;
+        
         private global::System.Data.DataRelation _relationcalendar_txt_calendar_dates_txt;
         
-        private global::System.Data.DataRelation _relationfare_attributes_txt_fare_rules_txt;
-        
         private global::System.Data.DataRelation _relationroutes_txt_fare_rules_txt;
+        
+        private global::System.Data.DataRelation _relationfare_attributes_txt_fare_rules_txt;
         
         private global::System.Data.DataRelation _relationFK_paths_shapes_txt;
         
@@ -559,15 +559,15 @@ namespace GTFSTools.IO {
                 }
             }
             this._relationagency_txt_routes_txt = this.Relations["agency.txt_routes.txt"];
-            this._relationFK_paths_trips_txt = this.Relations["FK_paths_trips.txt"];
-            this._relationcalendar_txt_trips_txt = this.Relations["calendar.txt_trips.txt"];
-            this._relationroutes_txt_trips_txt = this.Relations["routes.txt_trips.txt"];
             this._relationFK_DataTable1_trips_txt = this.Relations["FK_DataTable1_trips.txt"];
-            this._relationstops_txt_stop_times_txt = this.Relations["stops.txt_stop_times.txt"];
+            this._relationroutes_txt_trips_txt = this.Relations["routes.txt_trips.txt"];
+            this._relationcalendar_txt_trips_txt = this.Relations["calendar.txt_trips.txt"];
+            this._relationFK_paths_trips_txt = this.Relations["FK_paths_trips.txt"];
             this._relationtrips_txt_stop_times_txt = this.Relations["trips.txt_stop_times.txt"];
+            this._relationstops_txt_stop_times_txt = this.Relations["stops.txt_stop_times.txt"];
             this._relationcalendar_txt_calendar_dates_txt = this.Relations["calendar.txt_calendar_dates.txt"];
-            this._relationfare_attributes_txt_fare_rules_txt = this.Relations["fare_attributes.txt_fare_rules.txt"];
             this._relationroutes_txt_fare_rules_txt = this.Relations["routes.txt_fare_rules.txt"];
+            this._relationfare_attributes_txt_fare_rules_txt = this.Relations["fare_attributes.txt_fare_rules.txt"];
             this._relationFK_paths_shapes_txt = this.Relations["FK_paths_shapes.txt"];
             this._relationtrips_txt_frequencies_txt = this.Relations["trips.txt_frequencies.txt"];
             this._relationstops_txt_transfers_txt_to = this.Relations["stops.txt_transfers.txt_to"];
@@ -620,16 +620,9 @@ namespace GTFSTools.IO {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_paths_trips.txt", new global::System.Data.DataColumn[] {
-                        this.tablepaths.shape_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.shape_idColumn});
-            this._tabletrips_txt.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("calendar.txt_trips.txt", new global::System.Data.DataColumn[] {
-                        this._tablecalendar_txt.service_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.service_idColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_DataTable1_trips.txt", new global::System.Data.DataColumn[] {
+                        this.tableblocks.block_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tabletrips_txt.block_idColumn});
             this._tabletrips_txt.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -641,23 +634,30 @@ namespace GTFSTools.IO {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_DataTable1_trips.txt", new global::System.Data.DataColumn[] {
-                        this.tableblocks.block_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.block_idColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("calendar.txt_trips.txt", new global::System.Data.DataColumn[] {
+                        this._tablecalendar_txt.service_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tabletrips_txt.service_idColumn});
             this._tabletrips_txt.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("stops.txt_stop_times.txt", new global::System.Data.DataColumn[] {
-                        this._tablestops_txt.stop_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tablestop_times_txt.stop_idColumn});
-            this._tablestop_times_txt.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_paths_trips.txt", new global::System.Data.DataColumn[] {
+                        this.tablepaths.shape_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tabletrips_txt.shape_idColumn});
+            this._tabletrips_txt.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("trips.txt_stop_times.txt", new global::System.Data.DataColumn[] {
                         this._tabletrips_txt.trip_idColumn}, new global::System.Data.DataColumn[] {
                         this._tablestop_times_txt.trip_idColumn});
+            this._tablestop_times_txt.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            fkc = new global::System.Data.ForeignKeyConstraint("stops.txt_stop_times.txt", new global::System.Data.DataColumn[] {
+                        this._tablestops_txt.stop_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tablestop_times_txt.stop_idColumn});
             this._tablestop_times_txt.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -669,16 +669,16 @@ namespace GTFSTools.IO {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("fare_attributes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
-                        this._tablefare_attributes_txt.fare_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tablefare_rules_txt.fare_idColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("routes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
+                        this._tableroutes_txt.route_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tablefare_rules_txt.route_idColumn});
             this._tablefare_rules_txt.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("routes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
-                        this._tableroutes_txt.route_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tablefare_rules_txt.route_idColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("fare_attributes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
+                        this._tablefare_attributes_txt.fare_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tablefare_rules_txt.fare_idColumn});
             this._tablefare_rules_txt.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
@@ -708,42 +708,42 @@ namespace GTFSTools.IO {
                         this._tableagency_txt.agency_idColumn}, new global::System.Data.DataColumn[] {
                         this._tableroutes_txt.agency_idColumn}, false);
             this.Relations.Add(this._relationagency_txt_routes_txt);
-            this._relationFK_paths_trips_txt = new global::System.Data.DataRelation("FK_paths_trips.txt", new global::System.Data.DataColumn[] {
-                        this.tablepaths.shape_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.shape_idColumn}, false);
-            this.Relations.Add(this._relationFK_paths_trips_txt);
-            this._relationcalendar_txt_trips_txt = new global::System.Data.DataRelation("calendar.txt_trips.txt", new global::System.Data.DataColumn[] {
-                        this._tablecalendar_txt.service_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.service_idColumn}, false);
-            this.Relations.Add(this._relationcalendar_txt_trips_txt);
-            this._relationroutes_txt_trips_txt = new global::System.Data.DataRelation("routes.txt_trips.txt", new global::System.Data.DataColumn[] {
-                        this._tableroutes_txt.route_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tabletrips_txt.route_idColumn}, false);
-            this.Relations.Add(this._relationroutes_txt_trips_txt);
             this._relationFK_DataTable1_trips_txt = new global::System.Data.DataRelation("FK_DataTable1_trips.txt", new global::System.Data.DataColumn[] {
                         this.tableblocks.block_idColumn}, new global::System.Data.DataColumn[] {
                         this._tabletrips_txt.block_idColumn}, false);
             this.Relations.Add(this._relationFK_DataTable1_trips_txt);
-            this._relationstops_txt_stop_times_txt = new global::System.Data.DataRelation("stops.txt_stop_times.txt", new global::System.Data.DataColumn[] {
-                        this._tablestops_txt.stop_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tablestop_times_txt.stop_idColumn}, false);
-            this.Relations.Add(this._relationstops_txt_stop_times_txt);
+            this._relationroutes_txt_trips_txt = new global::System.Data.DataRelation("routes.txt_trips.txt", new global::System.Data.DataColumn[] {
+                        this._tableroutes_txt.route_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tabletrips_txt.route_idColumn}, false);
+            this.Relations.Add(this._relationroutes_txt_trips_txt);
+            this._relationcalendar_txt_trips_txt = new global::System.Data.DataRelation("calendar.txt_trips.txt", new global::System.Data.DataColumn[] {
+                        this._tablecalendar_txt.service_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tabletrips_txt.service_idColumn}, false);
+            this.Relations.Add(this._relationcalendar_txt_trips_txt);
+            this._relationFK_paths_trips_txt = new global::System.Data.DataRelation("FK_paths_trips.txt", new global::System.Data.DataColumn[] {
+                        this.tablepaths.shape_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tabletrips_txt.shape_idColumn}, false);
+            this.Relations.Add(this._relationFK_paths_trips_txt);
             this._relationtrips_txt_stop_times_txt = new global::System.Data.DataRelation("trips.txt_stop_times.txt", new global::System.Data.DataColumn[] {
                         this._tabletrips_txt.trip_idColumn}, new global::System.Data.DataColumn[] {
                         this._tablestop_times_txt.trip_idColumn}, false);
             this.Relations.Add(this._relationtrips_txt_stop_times_txt);
+            this._relationstops_txt_stop_times_txt = new global::System.Data.DataRelation("stops.txt_stop_times.txt", new global::System.Data.DataColumn[] {
+                        this._tablestops_txt.stop_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tablestop_times_txt.stop_idColumn}, false);
+            this.Relations.Add(this._relationstops_txt_stop_times_txt);
             this._relationcalendar_txt_calendar_dates_txt = new global::System.Data.DataRelation("calendar.txt_calendar_dates.txt", new global::System.Data.DataColumn[] {
                         this._tablecalendar_txt.service_idColumn}, new global::System.Data.DataColumn[] {
                         this._tablecalendar_dates_txt.service_idColumn}, false);
             this.Relations.Add(this._relationcalendar_txt_calendar_dates_txt);
-            this._relationfare_attributes_txt_fare_rules_txt = new global::System.Data.DataRelation("fare_attributes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
-                        this._tablefare_attributes_txt.fare_idColumn}, new global::System.Data.DataColumn[] {
-                        this._tablefare_rules_txt.fare_idColumn}, false);
-            this.Relations.Add(this._relationfare_attributes_txt_fare_rules_txt);
             this._relationroutes_txt_fare_rules_txt = new global::System.Data.DataRelation("routes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
                         this._tableroutes_txt.route_idColumn}, new global::System.Data.DataColumn[] {
                         this._tablefare_rules_txt.route_idColumn}, false);
             this.Relations.Add(this._relationroutes_txt_fare_rules_txt);
+            this._relationfare_attributes_txt_fare_rules_txt = new global::System.Data.DataRelation("fare_attributes.txt_fare_rules.txt", new global::System.Data.DataColumn[] {
+                        this._tablefare_attributes_txt.fare_idColumn}, new global::System.Data.DataColumn[] {
+                        this._tablefare_rules_txt.fare_idColumn}, false);
+            this.Relations.Add(this._relationfare_attributes_txt_fare_rules_txt);
             this._relationFK_paths_shapes_txt = new global::System.Data.DataRelation("FK_paths_shapes.txt", new global::System.Data.DataColumn[] {
                         this.tablepaths.shape_idColumn}, new global::System.Data.DataColumn[] {
                         this._tableshapes_txt.shape_idColumn}, false);
@@ -1580,6 +1580,7 @@ namespace GTFSTools.IO {
                 this.columnstop_name.AllowDBNull = false;
                 this.columnstop_lat.AllowDBNull = false;
                 this.columnstop_lon.AllowDBNull = false;
+                this.columnlocation_type.Caption = "";
                 this.ExtendedProperties.Add("Generator_TableVarName", "_tablestops_txt");
                 this.ExtendedProperties.Add("Generator_UserTableName", "stops.txt");
             }
@@ -6868,23 +6869,12 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public pathsRow pathsRow {
+            public blocksRow blocksRow {
                 get {
-                    return ((pathsRow)(this.GetParentRow(this.Table.ParentRelations["FK_paths_trips.txt"])));
+                    return ((blocksRow)(this.GetParentRow(this.Table.ParentRelations["FK_DataTable1_trips.txt"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_paths_trips.txt"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _calendar_txtRow _calendar_txtRow {
-                get {
-                    return ((_calendar_txtRow)(this.GetParentRow(this.Table.ParentRelations["calendar.txt_trips.txt"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["calendar.txt_trips.txt"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataTable1_trips.txt"]);
                 }
             }
             
@@ -6901,12 +6891,23 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public blocksRow blocksRow {
+            public _calendar_txtRow _calendar_txtRow {
                 get {
-                    return ((blocksRow)(this.GetParentRow(this.Table.ParentRelations["FK_DataTable1_trips.txt"])));
+                    return ((_calendar_txtRow)(this.GetParentRow(this.Table.ParentRelations["calendar.txt_trips.txt"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_DataTable1_trips.txt"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["calendar.txt_trips.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public pathsRow pathsRow {
+                get {
+                    return ((pathsRow)(this.GetParentRow(this.Table.ParentRelations["FK_paths_trips.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_paths_trips.txt"]);
                 }
             }
             
@@ -7178,23 +7179,23 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _stops_txtRow _stops_txtRow {
-                get {
-                    return ((_stops_txtRow)(this.GetParentRow(this.Table.ParentRelations["stops.txt_stop_times.txt"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["stops.txt_stop_times.txt"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public _trips_txtRow _trips_txtRow {
                 get {
                     return ((_trips_txtRow)(this.GetParentRow(this.Table.ParentRelations["trips.txt_stop_times.txt"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["trips.txt_stop_times.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _stops_txtRow _stops_txtRow {
+                get {
+                    return ((_stops_txtRow)(this.GetParentRow(this.Table.ParentRelations["stops.txt_stop_times.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["stops.txt_stop_times.txt"]);
                 }
             }
             
@@ -7707,23 +7708,23 @@ namespace GTFSTools.IO {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _fare_attributes_txtRow _fare_attributes_txtRow {
-                get {
-                    return ((_fare_attributes_txtRow)(this.GetParentRow(this.Table.ParentRelations["fare_attributes.txt_fare_rules.txt"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["fare_attributes.txt_fare_rules.txt"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public _routes_txtRow _routes_txtRow {
                 get {
                     return ((_routes_txtRow)(this.GetParentRow(this.Table.ParentRelations["routes.txt_fare_rules.txt"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["routes.txt_fare_rules.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _fare_attributes_txtRow _fare_attributes_txtRow {
+                get {
+                    return ((_fare_attributes_txtRow)(this.GetParentRow(this.Table.ParentRelations["fare_attributes.txt_fare_rules.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["fare_attributes.txt_fare_rules.txt"]);
                 }
             }
             
