@@ -70,7 +70,7 @@ namespace TableEdit
             var gtfsDataSet = (GTFSTools.IO.GTFSDataSet)bindingSource.DataSource;
             var dataTable = gtfsDataSet.Tables[bindingSource.DataMember];
             var dataColumn = dataTable.Columns[e.ColumnIndex];
-            if (!dataColumn.AllowDBNull && e.FormattedValue.ToString() == String.Empty)
+            if (!dataColumn.AllowDBNull && e.FormattedValue.ToString() == String.Empty && dataGridView.IsCurrentRowDirty)
             {
                 dataGridView[e.ColumnIndex, e.RowIndex].ErrorText = "Mandatory";
                 e.Cancel = true;
