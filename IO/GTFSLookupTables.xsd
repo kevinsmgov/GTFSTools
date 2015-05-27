@@ -12,7 +12,7 @@
   <xs:element name="GTFSLookupTables" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="GTFSLookupTables" msprop:Generator_UserDSName="GTFSLookupTables">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="time_zone" msprop:Generator_TableClassName="time_zoneDataTable" msprop:Generator_TableVarName="tabletime_zone" msprop:Generator_TablePropName="time_zone" msprop:Generator_RowDeletingName="time_zoneRowDeleting" msprop:Generator_RowChangingName="time_zoneRowChanging" msprop:Generator_RowEvHandlerName="time_zoneRowChangeEventHandler" msprop:Generator_RowDeletedName="time_zoneRowDeleted" msprop:Generator_UserTableName="time_zone" msprop:Generator_RowChangedName="time_zoneRowChanged" msprop:Generator_RowEvArgName="time_zoneRowChangeEvent" msprop:Generator_RowClassName="time_zoneRow">
+        <xs:element name="time_zone" msprop:Generator_TableClassName="time_zoneDataTable" msprop:Generator_TableVarName="tabletime_zone" msprop:Generator_RowChangedName="time_zoneRowChanged" msprop:Generator_TablePropName="time_zone" msprop:Generator_RowDeletingName="time_zoneRowDeleting" msprop:Generator_RowChangingName="time_zoneRowChanging" msprop:Generator_RowEvHandlerName="time_zoneRowChangeEventHandler" msprop:Generator_RowDeletedName="time_zoneRowDeleted" msprop:Generator_RowClassName="time_zoneRow" msprop:Generator_UserTableName="time_zone" msprop:Generator_RowEvArgName="time_zoneRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CC" msprop:Generator_ColumnVarNameInTable="columnCC" msprop:Generator_ColumnPropNameInRow="CC" msprop:Generator_ColumnPropNameInTable="CCColumn" msprop:Generator_UserColumnName="CC" type="xs:string" minOccurs="0" />
@@ -23,7 +23,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="language" msprop:Generator_TableClassName="languageDataTable" msprop:Generator_TableVarName="tablelanguage" msprop:Generator_RowChangedName="languageRowChanged" msprop:Generator_TablePropName="language" msprop:Generator_RowDeletingName="languageRowDeleting" msprop:Generator_RowChangingName="languageRowChanging" msprop:Generator_RowEvHandlerName="languageRowChangeEventHandler" msprop:Generator_RowDeletedName="languageRowDeleted" msprop:Generator_RowClassName="languageRow" msprop:Generator_UserTableName="language" msprop:Generator_RowEvArgName="languageRowChangeEvent">
+        <xs:element name="language" msprop:Generator_TableClassName="languageDataTable" msprop:Generator_TableVarName="tablelanguage" msprop:Generator_TablePropName="language" msprop:Generator_RowDeletingName="languageRowDeleting" msprop:Generator_RowChangingName="languageRowChanging" msprop:Generator_RowEvHandlerName="languageRowChangeEventHandler" msprop:Generator_RowDeletedName="languageRowDeleted" msprop:Generator_UserTableName="language" msprop:Generator_RowChangedName="languageRowChanged" msprop:Generator_RowEvArgName="languageRowChangeEvent" msprop:Generator_RowClassName="languageRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ISO_x0020_639-1_x0020_Code" msprop:Generator_ColumnVarNameInTable="_columnISO_639_1_Code" msprop:Generator_ColumnPropNameInRow="_ISO_639_1_Code" msprop:Generator_ColumnPropNameInTable="_ISO_639_1_CodeColumn" msprop:Generator_UserColumnName="ISO 639-1 Code" type="xs:string" minOccurs="0" />
@@ -31,7 +31,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="location_type" msprop:Generator_TableClassName="location_typeDataTable" msprop:Generator_TableVarName="tablelocation_type" msprop:Generator_TablePropName="location_type" msprop:Generator_RowDeletingName="location_typeRowDeleting" msprop:Generator_RowChangingName="location_typeRowChanging" msprop:Generator_RowEvHandlerName="location_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="location_typeRowDeleted" msprop:Generator_UserTableName="location_type" msprop:Generator_RowChangedName="location_typeRowChanged" msprop:Generator_RowEvArgName="location_typeRowChangeEvent" msprop:Generator_RowClassName="location_typeRow">
+        <xs:element name="location_type" msprop:Generator_TableClassName="location_typeDataTable" msprop:Generator_TableVarName="tablelocation_type" msprop:Generator_RowChangedName="location_typeRowChanged" msprop:Generator_TablePropName="location_type" msprop:Generator_RowDeletingName="location_typeRowDeleting" msprop:Generator_RowChangingName="location_typeRowChanging" msprop:Generator_RowEvHandlerName="location_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="location_typeRowDeleted" msprop:Generator_RowClassName="location_typeRow" msprop:Generator_UserTableName="location_type" msprop:Generator_RowEvArgName="location_typeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
@@ -39,7 +39,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="wheelchair_boarding" msprop:Generator_TableClassName="wheelchair_boardingDataTable" msprop:Generator_TableVarName="tablewheelchair_boarding" msprop:Generator_TablePropName="wheelchair_boarding" msprop:Generator_RowDeletingName="wheelchair_boardingRowDeleting" msprop:Generator_RowChangingName="wheelchair_boardingRowChanging" msprop:Generator_RowEvHandlerName="wheelchair_boardingRowChangeEventHandler" msprop:Generator_RowDeletedName="wheelchair_boardingRowDeleted" msprop:Generator_UserTableName="wheelchair_boarding" msprop:Generator_RowChangedName="wheelchair_boardingRowChanged" msprop:Generator_RowEvArgName="wheelchair_boardingRowChangeEvent" msprop:Generator_RowClassName="wheelchair_boardingRow">
+        <xs:element name="wheelchair_boarding" msprop:Generator_TableClassName="wheelchair_boardingDataTable" msprop:Generator_TableVarName="tablewheelchair_boarding" msprop:Generator_RowChangedName="wheelchair_boardingRowChanged" msprop:Generator_TablePropName="wheelchair_boarding" msprop:Generator_RowDeletingName="wheelchair_boardingRowDeleting" msprop:Generator_RowChangingName="wheelchair_boardingRowChanging" msprop:Generator_RowEvHandlerName="wheelchair_boardingRowChangeEventHandler" msprop:Generator_RowDeletedName="wheelchair_boardingRowDeleted" msprop:Generator_RowClassName="wheelchair_boardingRow" msprop:Generator_UserTableName="wheelchair_boarding" msprop:Generator_RowEvArgName="wheelchair_boardingRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
@@ -47,7 +47,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="pickup_type" msprop:Generator_TableClassName="pickup_typeDataTable" msprop:Generator_TableVarName="tablepickup_type" msprop:Generator_RowChangedName="pickup_typeRowChanged" msprop:Generator_TablePropName="pickup_type" msprop:Generator_RowDeletingName="pickup_typeRowDeleting" msprop:Generator_RowChangingName="pickup_typeRowChanging" msprop:Generator_RowEvHandlerName="pickup_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="pickup_typeRowDeleted" msprop:Generator_RowClassName="pickup_typeRow" msprop:Generator_UserTableName="pickup_type" msprop:Generator_RowEvArgName="pickup_typeRowChangeEvent">
+        <xs:element name="pickup_type" msprop:Generator_TableClassName="pickup_typeDataTable" msprop:Generator_TableVarName="tablepickup_type" msprop:Generator_TablePropName="pickup_type" msprop:Generator_RowDeletingName="pickup_typeRowDeleting" msprop:Generator_RowChangingName="pickup_typeRowChanging" msprop:Generator_RowEvHandlerName="pickup_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="pickup_typeRowDeleted" msprop:Generator_UserTableName="pickup_type" msprop:Generator_RowChangedName="pickup_typeRowChanged" msprop:Generator_RowEvArgName="pickup_typeRowChangeEvent" msprop:Generator_RowClassName="pickup_typeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
@@ -55,7 +55,23 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="drop_off_type" msprop:Generator_TableClassName="drop_off_typeDataTable" msprop:Generator_TableVarName="tabledrop_off_type" msprop:Generator_RowChangedName="drop_off_typeRowChanged" msprop:Generator_TablePropName="drop_off_type" msprop:Generator_RowDeletingName="drop_off_typeRowDeleting" msprop:Generator_RowChangingName="drop_off_typeRowChanging" msprop:Generator_RowEvHandlerName="drop_off_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="drop_off_typeRowDeleted" msprop:Generator_RowClassName="drop_off_typeRow" msprop:Generator_UserTableName="drop_off_type" msprop:Generator_RowEvArgName="drop_off_typeRowChangeEvent">
+        <xs:element name="drop_off_type" msprop:Generator_TableClassName="drop_off_typeDataTable" msprop:Generator_TableVarName="tabledrop_off_type" msprop:Generator_TablePropName="drop_off_type" msprop:Generator_RowDeletingName="drop_off_typeRowDeleting" msprop:Generator_RowChangingName="drop_off_typeRowChanging" msprop:Generator_RowEvHandlerName="drop_off_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="drop_off_typeRowDeleted" msprop:Generator_UserTableName="drop_off_type" msprop:Generator_RowChangedName="drop_off_typeRowChanged" msprop:Generator_RowEvArgName="drop_off_typeRowChangeEvent" msprop:Generator_RowClassName="drop_off_typeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="Display" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="wheelchair_accessible" msprop:Generator_TableClassName="wheelchair_accessibleDataTable" msprop:Generator_TableVarName="tablewheelchair_accessible" msprop:Generator_TablePropName="wheelchair_accessible" msprop:Generator_RowDeletingName="wheelchair_accessibleRowDeleting" msprop:Generator_RowChangingName="wheelchair_accessibleRowChanging" msprop:Generator_RowEvHandlerName="wheelchair_accessibleRowChangeEventHandler" msprop:Generator_RowDeletedName="wheelchair_accessibleRowDeleted" msprop:Generator_UserTableName="wheelchair_accessible" msprop:Generator_RowChangedName="wheelchair_accessibleRowChanged" msprop:Generator_RowEvArgName="wheelchair_accessibleRowChangeEvent" msprop:Generator_RowClassName="wheelchair_accessibleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="Display" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bikes_allowed" msprop:Generator_TableClassName="bikes_allowedDataTable" msprop:Generator_TableVarName="tablebikes_allowed" msprop:Generator_TablePropName="bikes_allowed" msprop:Generator_RowDeletingName="bikes_allowedRowDeleting" msprop:Generator_RowChangingName="bikes_allowedRowChanging" msprop:Generator_RowEvHandlerName="bikes_allowedRowChangeEventHandler" msprop:Generator_RowDeletedName="bikes_allowedRowDeleted" msprop:Generator_UserTableName="bikes_allowed" msprop:Generator_RowChangedName="bikes_allowedRowChanged" msprop:Generator_RowEvArgName="bikes_allowedRowChangeEvent" msprop:Generator_RowClassName="bikes_allowedRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />

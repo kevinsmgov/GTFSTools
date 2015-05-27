@@ -16,18 +16,22 @@ namespace TableEdit
 
         protected void BindDataGridViews()
         {
-            agencyBindingSource.DataSource = gtfs.DataSet;
-            stopsBindingSource.DataSource = gtfs.DataSet;
-            routesBindingSource.DataSource = gtfs.DataSet;
-            stop_timesBindingSource.DataSource = gtfs.DataSet;
-            calendarBindingSource.DataSource = gtfs.DataSet;
-            calendar_dateBindingSource.DataSource = gtfs.DataSet;
-            fare_attributesDindingSource.DataSource = gtfs.DataSet;
-            fare_rulesBindingSource.DataSource = gtfs.DataSet;
-            shapesBindingSource.DataSource = gtfs.DataSet;
-            frequenciesBindingSource.DataSource = gtfs.DataSet;
-            transfersBindingSource.DataSource = gtfs.DataSet;
-            feed_infoBindingSource.DataSource = gtfs.DataSet;
+            foreach(var bindingSource in new BindingSource[]{
+                agencyBindingSource,
+                stopsBindingSource,
+                routesBindingSource,
+                tripsBindingSource,
+                stop_timesBindingSource,
+                calendarBindingSource,
+                calendar_dateBindingSource,
+                fare_attributesDindingSource,
+                fare_rulesBindingSource,
+                shapesBindingSource,
+                frequenciesBindingSource,
+                transfersBindingSource,
+                feed_infoBindingSource,
+                pathsBindingSource
+            }) { bindingSource.DataSource = gtfs.DataSet; }
         }
 
         public Form1()
@@ -56,18 +60,20 @@ namespace TableEdit
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            gtfs.DataSet.Relations.Remove("FK_blocks_trips.txt");
-            gtfs.DataSet.Relations.Remove("FK_paths_shapes.txt");
-            gtfs.DataSet.Relations.Remove("FK_paths_trips.txt");
-            gtfs.DataSet._shapes_txt.Constraints.Remove("FK_paths_shapes.txt");
-            gtfs.DataSet._trips_txt.Constraints.Remove("FK_blocks_trips.txt");
-            gtfs.DataSet._trips_txt.Constraints.Remove("FK_paths_trips.txt");
+            //gtfs.DataSet.Relations.Remove("FK_blocks_trips.txt");
+            //gtfs.DataSet.Relations.Remove("FK_paths_shapes.txt");
+            //gtfs.DataSet.Relations.Remove("FK_paths_trips.txt");
+            //gtfs.DataSet._shapes_txt.Constraints.Remove("FK_paths_shapes.txt");
+            //gtfs.DataSet._trips_txt.Constraints.Remove("FK_blocks_trips.txt");
+            //gtfs.DataSet._trips_txt.Constraints.Remove("FK_paths_trips.txt");
             time_zoneBindingSource.DataSource = GTFSTools.IO.LookupTables.time_zones;
             languageBindingSource.DataSource = GTFSTools.IO.LookupTables.languages;
             location_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.location_types;
             wheelchair_boardingBindingSource.DataSource = GTFSTools.IO.LookupTables.wheelchair_boardings;
             pickup_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.pickup_type;
             drop_off_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.drop_off_type;
+            wheelchair_accessibleBindingSource.DataSource = GTFSTools.IO.LookupTables.wheelchair_accessible;
+            bikes_allowedBindingSource.DataSource = GTFSTools.IO.LookupTables.bikes_allowed;
             BindDataGridViews();
         }
 

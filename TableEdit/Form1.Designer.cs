@@ -87,7 +87,7 @@
             this.locationtypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.location_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.parentstationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stoptimezoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stoptimezoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.wheelchairboardingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.routeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,18 +100,21 @@
             this.routecolorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.routetextcolorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.routesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.routeidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.serviceidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.calendarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tripidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tripheadsignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tripshortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.directionidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.blockidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shapeidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wheelchairaccessibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bikesallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wheelchair_boardingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tripsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tripidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.arrivaltimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departuretimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.stopsequenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stopheadsignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pickuptypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.pickup_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dropofftypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.drop_off_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.shapedisttraveledDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timepointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stop_timesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mondayDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -164,19 +167,19 @@
             this.feedenddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feedversionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feed_infoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.wheelchair_boardingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pickup_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drop_off_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tripidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.arrivaltimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departuretimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.stopsequenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stopheadsignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pickuptypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dropofftypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.shapedisttraveledDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timepointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wheelchair_accessibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bikes_allowedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.routeidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.serviceidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tripidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tripheadsignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tripshortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.directionidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.blockidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shapeidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.wheelchairaccessibleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bikesallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.feed_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedInfo)).BeginInit();
@@ -212,7 +215,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.stopsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calendarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wheelchair_boardingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tripsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickup_typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drop_off_typeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stop_timesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calendar_dateBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fare_attributesDindingSource)).BeginInit();
@@ -221,9 +227,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transfersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feed_infoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wheelchair_boardingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pickup_typeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drop_off_typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wheelchair_accessibleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bikes_allowedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -883,8 +889,13 @@
             // stoptimezoneDataGridViewTextBoxColumn
             // 
             this.stoptimezoneDataGridViewTextBoxColumn.DataPropertyName = "stop_timezone";
+            this.stoptimezoneDataGridViewTextBoxColumn.DataSource = this.time_zoneBindingSource;
+            this.stoptimezoneDataGridViewTextBoxColumn.DisplayMember = "TZ";
             this.stoptimezoneDataGridViewTextBoxColumn.HeaderText = "stop_timezone";
             this.stoptimezoneDataGridViewTextBoxColumn.Name = "stoptimezoneDataGridViewTextBoxColumn";
+            this.stoptimezoneDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.stoptimezoneDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.stoptimezoneDataGridViewTextBoxColumn.ValueMember = "TZ";
             // 
             // wheelchairboardingDataGridViewTextBoxColumn
             // 
@@ -961,90 +972,110 @@
             this.routesBindingSource.DataMember = "routes.txt";
             this.routesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
-            // routeidDataGridViewTextBoxColumn2
-            // 
-            this.routeidDataGridViewTextBoxColumn2.DataPropertyName = "route_id";
-            this.routeidDataGridViewTextBoxColumn2.DataSource = this.routesBindingSource;
-            this.routeidDataGridViewTextBoxColumn2.DisplayMember = "route_short_name";
-            this.routeidDataGridViewTextBoxColumn2.HeaderText = "route_id";
-            this.routeidDataGridViewTextBoxColumn2.Name = "routeidDataGridViewTextBoxColumn2";
-            this.routeidDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.routeidDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.routeidDataGridViewTextBoxColumn2.ValueMember = "route_id";
-            // 
-            // serviceidDataGridViewTextBoxColumn2
-            // 
-            this.serviceidDataGridViewTextBoxColumn2.DataPropertyName = "service_id";
-            this.serviceidDataGridViewTextBoxColumn2.DataSource = this.calendarBindingSource;
-            this.serviceidDataGridViewTextBoxColumn2.DisplayMember = "service_id";
-            this.serviceidDataGridViewTextBoxColumn2.HeaderText = "service_id";
-            this.serviceidDataGridViewTextBoxColumn2.Name = "serviceidDataGridViewTextBoxColumn2";
-            this.serviceidDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviceidDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.serviceidDataGridViewTextBoxColumn2.ValueMember = "service_id";
-            // 
             // calendarBindingSource
             // 
             this.calendarBindingSource.DataMember = "calendar.txt";
             this.calendarBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
-            // tripidDataGridViewTextBoxColumn2
+            // wheelchair_boardingBindingSource
             // 
-            this.tripidDataGridViewTextBoxColumn2.DataPropertyName = "trip_id";
-            this.tripidDataGridViewTextBoxColumn2.HeaderText = "trip_id";
-            this.tripidDataGridViewTextBoxColumn2.Name = "tripidDataGridViewTextBoxColumn2";
-            // 
-            // tripheadsignDataGridViewTextBoxColumn
-            // 
-            this.tripheadsignDataGridViewTextBoxColumn.DataPropertyName = "trip_headsign";
-            this.tripheadsignDataGridViewTextBoxColumn.HeaderText = "trip_headsign";
-            this.tripheadsignDataGridViewTextBoxColumn.Name = "tripheadsignDataGridViewTextBoxColumn";
-            // 
-            // tripshortnameDataGridViewTextBoxColumn
-            // 
-            this.tripshortnameDataGridViewTextBoxColumn.DataPropertyName = "trip_short_name";
-            this.tripshortnameDataGridViewTextBoxColumn.HeaderText = "trip_short_name";
-            this.tripshortnameDataGridViewTextBoxColumn.Name = "tripshortnameDataGridViewTextBoxColumn";
-            // 
-            // directionidDataGridViewTextBoxColumn
-            // 
-            this.directionidDataGridViewTextBoxColumn.DataPropertyName = "direction_id";
-            this.directionidDataGridViewTextBoxColumn.HeaderText = "direction_id";
-            this.directionidDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.directionidDataGridViewTextBoxColumn.Name = "directionidDataGridViewTextBoxColumn";
-            this.directionidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.directionidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // blockidDataGridViewTextBoxColumn
-            // 
-            this.blockidDataGridViewTextBoxColumn.DataPropertyName = "block_id";
-            this.blockidDataGridViewTextBoxColumn.HeaderText = "block_id";
-            this.blockidDataGridViewTextBoxColumn.Name = "blockidDataGridViewTextBoxColumn";
-            // 
-            // shapeidDataGridViewTextBoxColumn1
-            // 
-            this.shapeidDataGridViewTextBoxColumn1.DataPropertyName = "shape_id";
-            this.shapeidDataGridViewTextBoxColumn1.HeaderText = "shape_id";
-            this.shapeidDataGridViewTextBoxColumn1.Name = "shapeidDataGridViewTextBoxColumn1";
-            // 
-            // wheelchairaccessibleDataGridViewTextBoxColumn
-            // 
-            this.wheelchairaccessibleDataGridViewTextBoxColumn.DataPropertyName = "wheelchair_accessible";
-            this.wheelchairaccessibleDataGridViewTextBoxColumn.HeaderText = "wheelchair_accessible";
-            this.wheelchairaccessibleDataGridViewTextBoxColumn.Name = "wheelchairaccessibleDataGridViewTextBoxColumn";
-            // 
-            // bikesallowedDataGridViewTextBoxColumn
-            // 
-            this.bikesallowedDataGridViewTextBoxColumn.DataPropertyName = "bikes_allowed";
-            this.bikesallowedDataGridViewTextBoxColumn.HeaderText = "bikes_allowed";
-            this.bikesallowedDataGridViewTextBoxColumn.Name = "bikesallowedDataGridViewTextBoxColumn";
+            this.wheelchair_boardingBindingSource.DataMember = "wheelchair_boarding";
+            this.wheelchair_boardingBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
             // tripsBindingSource
             // 
             this.tripsBindingSource.DataMember = "trips.txt";
             this.tripsBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            // 
+            // tripidDataGridViewTextBoxColumn1
+            // 
+            this.tripidDataGridViewTextBoxColumn1.DataPropertyName = "trip_id";
+            this.tripidDataGridViewTextBoxColumn1.DataSource = this.tripsBindingSource;
+            this.tripidDataGridViewTextBoxColumn1.DisplayMember = "trip_id";
+            this.tripidDataGridViewTextBoxColumn1.HeaderText = "trip_id";
+            this.tripidDataGridViewTextBoxColumn1.Name = "tripidDataGridViewTextBoxColumn1";
+            this.tripidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tripidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tripidDataGridViewTextBoxColumn1.ValueMember = "trip_id";
+            // 
+            // arrivaltimeDataGridViewTextBoxColumn
+            // 
+            this.arrivaltimeDataGridViewTextBoxColumn.DataPropertyName = "arrival_time";
+            this.arrivaltimeDataGridViewTextBoxColumn.HeaderText = "arrival_time";
+            this.arrivaltimeDataGridViewTextBoxColumn.Name = "arrivaltimeDataGridViewTextBoxColumn";
+            // 
+            // departuretimeDataGridViewTextBoxColumn
+            // 
+            this.departuretimeDataGridViewTextBoxColumn.DataPropertyName = "departure_time";
+            this.departuretimeDataGridViewTextBoxColumn.HeaderText = "departure_time";
+            this.departuretimeDataGridViewTextBoxColumn.Name = "departuretimeDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "stop_id";
+            this.dataGridViewTextBoxColumn21.DataSource = this.stopsBindingSource;
+            this.dataGridViewTextBoxColumn21.DisplayMember = "stop_name";
+            this.dataGridViewTextBoxColumn21.HeaderText = "stop_id";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn21.ValueMember = "stop_id";
+            // 
+            // stopsequenceDataGridViewTextBoxColumn
+            // 
+            this.stopsequenceDataGridViewTextBoxColumn.DataPropertyName = "stop_sequence";
+            this.stopsequenceDataGridViewTextBoxColumn.HeaderText = "stop_sequence";
+            this.stopsequenceDataGridViewTextBoxColumn.Name = "stopsequenceDataGridViewTextBoxColumn";
+            // 
+            // stopheadsignDataGridViewTextBoxColumn
+            // 
+            this.stopheadsignDataGridViewTextBoxColumn.DataPropertyName = "stop_headsign";
+            this.stopheadsignDataGridViewTextBoxColumn.HeaderText = "stop_headsign";
+            this.stopheadsignDataGridViewTextBoxColumn.Name = "stopheadsignDataGridViewTextBoxColumn";
+            // 
+            // pickuptypeDataGridViewTextBoxColumn
+            // 
+            this.pickuptypeDataGridViewTextBoxColumn.DataPropertyName = "pickup_type";
+            this.pickuptypeDataGridViewTextBoxColumn.DataSource = this.pickup_typeBindingSource;
+            this.pickuptypeDataGridViewTextBoxColumn.DisplayMember = "Display";
+            this.pickuptypeDataGridViewTextBoxColumn.HeaderText = "pickup_type";
+            this.pickuptypeDataGridViewTextBoxColumn.Name = "pickuptypeDataGridViewTextBoxColumn";
+            this.pickuptypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.pickuptypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.pickuptypeDataGridViewTextBoxColumn.ValueMember = "Value";
+            // 
+            // pickup_typeBindingSource
+            // 
+            this.pickup_typeBindingSource.DataMember = "pickup_type";
+            this.pickup_typeBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            // 
+            // dropofftypeDataGridViewTextBoxColumn
+            // 
+            this.dropofftypeDataGridViewTextBoxColumn.DataPropertyName = "drop_off_type";
+            this.dropofftypeDataGridViewTextBoxColumn.DataSource = this.drop_off_typeBindingSource;
+            this.dropofftypeDataGridViewTextBoxColumn.DisplayMember = "Display";
+            this.dropofftypeDataGridViewTextBoxColumn.HeaderText = "drop_off_type";
+            this.dropofftypeDataGridViewTextBoxColumn.Name = "dropofftypeDataGridViewTextBoxColumn";
+            this.dropofftypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dropofftypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dropofftypeDataGridViewTextBoxColumn.ValueMember = "Value";
+            // 
+            // drop_off_typeBindingSource
+            // 
+            this.drop_off_typeBindingSource.DataMember = "drop_off_type";
+            this.drop_off_typeBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            // 
+            // shapedisttraveledDataGridViewTextBoxColumn1
+            // 
+            this.shapedisttraveledDataGridViewTextBoxColumn1.DataPropertyName = "shape_dist_traveled";
+            this.shapedisttraveledDataGridViewTextBoxColumn1.HeaderText = "shape_dist_traveled";
+            this.shapedisttraveledDataGridViewTextBoxColumn1.Name = "shapedisttraveledDataGridViewTextBoxColumn1";
+            // 
+            // timepointDataGridViewTextBoxColumn
+            // 
+            this.timepointDataGridViewTextBoxColumn.DataPropertyName = "timepoint";
+            this.timepointDataGridViewTextBoxColumn.HeaderText = "timepoint";
+            this.timepointDataGridViewTextBoxColumn.Name = "timepointDataGridViewTextBoxColumn";
             // 
             // stop_timesBindingSource
             // 
@@ -1350,100 +1381,110 @@
             this.feed_infoBindingSource.DataMember = "feed_info.txt";
             this.feed_infoBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
-            // wheelchair_boardingBindingSource
+            // wheelchair_accessibleBindingSource
             // 
-            this.wheelchair_boardingBindingSource.DataMember = "wheelchair_boarding";
-            this.wheelchair_boardingBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            this.wheelchair_accessibleBindingSource.DataMember = "wheelchair_accessible";
+            this.wheelchair_accessibleBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
-            // pickup_typeBindingSource
+            // bikes_allowedBindingSource
             // 
-            this.pickup_typeBindingSource.DataMember = "pickup_type";
-            this.pickup_typeBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            this.bikes_allowedBindingSource.DataMember = "bikes_allowed";
+            this.bikes_allowedBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
-            // drop_off_typeBindingSource
+            // pathsBindingSource
             // 
-            this.drop_off_typeBindingSource.DataMember = "drop_off_type";
-            this.drop_off_typeBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            this.pathsBindingSource.DataMember = "paths";
+            this.pathsBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
-            // tripidDataGridViewTextBoxColumn1
+            // routeidDataGridViewTextBoxColumn2
             // 
-            this.tripidDataGridViewTextBoxColumn1.DataPropertyName = "trip_id";
-            this.tripidDataGridViewTextBoxColumn1.DataSource = this.tripsBindingSource;
-            this.tripidDataGridViewTextBoxColumn1.DisplayMember = "trip_id";
-            this.tripidDataGridViewTextBoxColumn1.HeaderText = "trip_id";
-            this.tripidDataGridViewTextBoxColumn1.Name = "tripidDataGridViewTextBoxColumn1";
-            this.tripidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.tripidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.tripidDataGridViewTextBoxColumn1.ValueMember = "trip_id";
+            this.routeidDataGridViewTextBoxColumn2.DataPropertyName = "route_id";
+            this.routeidDataGridViewTextBoxColumn2.DataSource = this.routesBindingSource;
+            this.routeidDataGridViewTextBoxColumn2.DisplayMember = "route_short_name";
+            this.routeidDataGridViewTextBoxColumn2.HeaderText = "route_id";
+            this.routeidDataGridViewTextBoxColumn2.Name = "routeidDataGridViewTextBoxColumn2";
+            this.routeidDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.routeidDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.routeidDataGridViewTextBoxColumn2.ValueMember = "route_id";
             // 
-            // arrivaltimeDataGridViewTextBoxColumn
+            // serviceidDataGridViewTextBoxColumn2
             // 
-            this.arrivaltimeDataGridViewTextBoxColumn.DataPropertyName = "arrival_time";
-            this.arrivaltimeDataGridViewTextBoxColumn.HeaderText = "arrival_time";
-            this.arrivaltimeDataGridViewTextBoxColumn.Name = "arrivaltimeDataGridViewTextBoxColumn";
+            this.serviceidDataGridViewTextBoxColumn2.DataPropertyName = "service_id";
+            this.serviceidDataGridViewTextBoxColumn2.DataSource = this.calendarBindingSource;
+            this.serviceidDataGridViewTextBoxColumn2.DisplayMember = "service_id";
+            this.serviceidDataGridViewTextBoxColumn2.HeaderText = "service_id";
+            this.serviceidDataGridViewTextBoxColumn2.Name = "serviceidDataGridViewTextBoxColumn2";
+            this.serviceidDataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviceidDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.serviceidDataGridViewTextBoxColumn2.ValueMember = "service_id";
             // 
-            // departuretimeDataGridViewTextBoxColumn
+            // tripidDataGridViewTextBoxColumn2
             // 
-            this.departuretimeDataGridViewTextBoxColumn.DataPropertyName = "departure_time";
-            this.departuretimeDataGridViewTextBoxColumn.HeaderText = "departure_time";
-            this.departuretimeDataGridViewTextBoxColumn.Name = "departuretimeDataGridViewTextBoxColumn";
+            this.tripidDataGridViewTextBoxColumn2.DataPropertyName = "trip_id";
+            this.tripidDataGridViewTextBoxColumn2.HeaderText = "trip_id";
+            this.tripidDataGridViewTextBoxColumn2.Name = "tripidDataGridViewTextBoxColumn2";
             // 
-            // dataGridViewTextBoxColumn21
+            // tripheadsignDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "stop_id";
-            this.dataGridViewTextBoxColumn21.DataSource = this.stopsBindingSource;
-            this.dataGridViewTextBoxColumn21.DisplayMember = "stop_name";
-            this.dataGridViewTextBoxColumn21.HeaderText = "stop_id";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn21.ValueMember = "stop_id";
+            this.tripheadsignDataGridViewTextBoxColumn.DataPropertyName = "trip_headsign";
+            this.tripheadsignDataGridViewTextBoxColumn.HeaderText = "trip_headsign";
+            this.tripheadsignDataGridViewTextBoxColumn.Name = "tripheadsignDataGridViewTextBoxColumn";
             // 
-            // stopsequenceDataGridViewTextBoxColumn
+            // tripshortnameDataGridViewTextBoxColumn
             // 
-            this.stopsequenceDataGridViewTextBoxColumn.DataPropertyName = "stop_sequence";
-            this.stopsequenceDataGridViewTextBoxColumn.HeaderText = "stop_sequence";
-            this.stopsequenceDataGridViewTextBoxColumn.Name = "stopsequenceDataGridViewTextBoxColumn";
+            this.tripshortnameDataGridViewTextBoxColumn.DataPropertyName = "trip_short_name";
+            this.tripshortnameDataGridViewTextBoxColumn.HeaderText = "trip_short_name";
+            this.tripshortnameDataGridViewTextBoxColumn.Name = "tripshortnameDataGridViewTextBoxColumn";
             // 
-            // stopheadsignDataGridViewTextBoxColumn
+            // directionidDataGridViewTextBoxColumn
             // 
-            this.stopheadsignDataGridViewTextBoxColumn.DataPropertyName = "stop_headsign";
-            this.stopheadsignDataGridViewTextBoxColumn.HeaderText = "stop_headsign";
-            this.stopheadsignDataGridViewTextBoxColumn.Name = "stopheadsignDataGridViewTextBoxColumn";
+            this.directionidDataGridViewTextBoxColumn.DataPropertyName = "direction_id";
+            this.directionidDataGridViewTextBoxColumn.HeaderText = "direction_id";
+            this.directionidDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.directionidDataGridViewTextBoxColumn.Name = "directionidDataGridViewTextBoxColumn";
+            this.directionidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.directionidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // pickuptypeDataGridViewTextBoxColumn
+            // blockidDataGridViewTextBoxColumn
             // 
-            this.pickuptypeDataGridViewTextBoxColumn.DataPropertyName = "pickup_type";
-            this.pickuptypeDataGridViewTextBoxColumn.DataSource = this.pickup_typeBindingSource;
-            this.pickuptypeDataGridViewTextBoxColumn.DisplayMember = "Display";
-            this.pickuptypeDataGridViewTextBoxColumn.HeaderText = "pickup_type";
-            this.pickuptypeDataGridViewTextBoxColumn.Name = "pickuptypeDataGridViewTextBoxColumn";
-            this.pickuptypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.pickuptypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.pickuptypeDataGridViewTextBoxColumn.ValueMember = "Value";
+            this.blockidDataGridViewTextBoxColumn.DataPropertyName = "block_id";
+            this.blockidDataGridViewTextBoxColumn.HeaderText = "block_id";
+            this.blockidDataGridViewTextBoxColumn.Name = "blockidDataGridViewTextBoxColumn";
             // 
-            // dropofftypeDataGridViewTextBoxColumn
+            // shapeidDataGridViewTextBoxColumn1
             // 
-            this.dropofftypeDataGridViewTextBoxColumn.DataPropertyName = "drop_off_type";
-            this.dropofftypeDataGridViewTextBoxColumn.DataSource = this.drop_off_typeBindingSource;
-            this.dropofftypeDataGridViewTextBoxColumn.DisplayMember = "Display";
-            this.dropofftypeDataGridViewTextBoxColumn.HeaderText = "drop_off_type";
-            this.dropofftypeDataGridViewTextBoxColumn.Name = "dropofftypeDataGridViewTextBoxColumn";
-            this.dropofftypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dropofftypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dropofftypeDataGridViewTextBoxColumn.ValueMember = "Value";
+            this.shapeidDataGridViewTextBoxColumn1.DataPropertyName = "shape_id";
+            this.shapeidDataGridViewTextBoxColumn1.DataSource = this.pathsBindingSource;
+            this.shapeidDataGridViewTextBoxColumn1.DisplayMember = "shape_id";
+            this.shapeidDataGridViewTextBoxColumn1.HeaderText = "shape_id";
+            this.shapeidDataGridViewTextBoxColumn1.Name = "shapeidDataGridViewTextBoxColumn1";
+            this.shapeidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.shapeidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.shapeidDataGridViewTextBoxColumn1.ValueMember = "shape_id";
             // 
-            // shapedisttraveledDataGridViewTextBoxColumn1
+            // wheelchairaccessibleDataGridViewTextBoxColumn
             // 
-            this.shapedisttraveledDataGridViewTextBoxColumn1.DataPropertyName = "shape_dist_traveled";
-            this.shapedisttraveledDataGridViewTextBoxColumn1.HeaderText = "shape_dist_traveled";
-            this.shapedisttraveledDataGridViewTextBoxColumn1.Name = "shapedisttraveledDataGridViewTextBoxColumn1";
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.DataPropertyName = "wheelchair_accessible";
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.DataSource = this.wheelchair_accessibleBindingSource;
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.DisplayMember = "Display";
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.HeaderText = "wheelchair_accessible";
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.Name = "wheelchairaccessibleDataGridViewTextBoxColumn";
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.wheelchairaccessibleDataGridViewTextBoxColumn.ValueMember = "Value";
             // 
-            // timepointDataGridViewTextBoxColumn
+            // bikesallowedDataGridViewTextBoxColumn
             // 
-            this.timepointDataGridViewTextBoxColumn.DataPropertyName = "timepoint";
-            this.timepointDataGridViewTextBoxColumn.HeaderText = "timepoint";
-            this.timepointDataGridViewTextBoxColumn.Name = "timepointDataGridViewTextBoxColumn";
+            this.bikesallowedDataGridViewTextBoxColumn.DataPropertyName = "bikes_allowed";
+            this.bikesallowedDataGridViewTextBoxColumn.DataSource = this.bikes_allowedBindingSource;
+            this.bikesallowedDataGridViewTextBoxColumn.DisplayMember = "Display";
+            this.bikesallowedDataGridViewTextBoxColumn.HeaderText = "bikes_allowed";
+            this.bikesallowedDataGridViewTextBoxColumn.Name = "bikesallowedDataGridViewTextBoxColumn";
+            this.bikesallowedDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.bikesallowedDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.bikesallowedDataGridViewTextBoxColumn.ValueMember = "Value";
             // 
             // Form1
             // 
@@ -1492,7 +1533,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.stopsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calendarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wheelchair_boardingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tripsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickup_typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drop_off_typeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stop_timesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.calendar_dateBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fare_attributesDindingSource)).EndInit();
@@ -1501,9 +1545,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transfersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.feed_infoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wheelchair_boardingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pickup_typeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drop_off_typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wheelchair_accessibleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bikes_allowedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1577,16 +1621,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn exceptiontypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage calendar;
         private System.Windows.Forms.DataGridView dataGridViewCalendar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn serviceidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn mondayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn tuesdayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn wednesdayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn thursdayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn fridayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn saturdayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sundayDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enddateDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage stop_times;
         private System.Windows.Forms.DataGridView dataGridViewStopTimes;
         private System.Windows.Forms.TabPage routes;
@@ -1625,28 +1659,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn agencylangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agencyphoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agencyfareurlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stopidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stopcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stopnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stopdescDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stoplatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stoplonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zoneidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stopurlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn locationtypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn parentstationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stoptimezoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wheelchairboardingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn routeidDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn serviceidDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tripidDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tripheadsignDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tripshortnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewComboBoxColumn directionidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn blockidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shapeidDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wheelchairaccessibleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bikesallowedDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource pickup_typeBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn tripidDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn arrivaltimeDataGridViewTextBoxColumn;
@@ -1659,5 +1671,40 @@
         private System.Windows.Forms.BindingSource drop_off_typeBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn shapedisttraveledDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn timepointDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stopidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stopcodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stopnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stopdescDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stoplatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stoplonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zoneidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stopurlDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn locationtypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parentstationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn stoptimezoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wheelchairboardingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviceidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn mondayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn tuesdayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn wednesdayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn thursdayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn fridayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn saturdayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn sundayDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enddateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource wheelchair_accessibleBindingSource;
+        private System.Windows.Forms.BindingSource bikes_allowedBindingSource;
+        private System.Windows.Forms.BindingSource pathsBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn routeidDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn serviceidDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tripidDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tripheadsignDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tripshortnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn directionidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn blockidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn shapeidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn wheelchairaccessibleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn bikesallowedDataGridViewTextBoxColumn;
     }
 }
