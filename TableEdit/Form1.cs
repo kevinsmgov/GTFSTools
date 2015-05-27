@@ -56,10 +56,18 @@ namespace TableEdit
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            gtfs.DataSet.Relations.Remove("FK_blocks_trips.txt");
+            gtfs.DataSet.Relations.Remove("FK_paths_shapes.txt");
+            gtfs.DataSet.Relations.Remove("FK_paths_trips.txt");
+            gtfs.DataSet._shapes_txt.Constraints.Remove("FK_paths_shapes.txt");
+            gtfs.DataSet._trips_txt.Constraints.Remove("FK_blocks_trips.txt");
+            gtfs.DataSet._trips_txt.Constraints.Remove("FK_paths_trips.txt");
             time_zoneBindingSource.DataSource = GTFSTools.IO.LookupTables.time_zones;
             languageBindingSource.DataSource = GTFSTools.IO.LookupTables.languages;
             location_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.location_types;
             wheelchair_boardingBindingSource.DataSource = GTFSTools.IO.LookupTables.wheelchair_boardings;
+            pickup_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.pickup_type;
+            drop_off_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.drop_off_type;
             BindDataGridViews();
         }
 

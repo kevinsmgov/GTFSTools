@@ -48,5 +48,31 @@ namespace GTFSTools.IO
                 return result;
             }
         }
+        public static GTFSLookupTables.pickup_typeDataTable pickup_type
+        {
+            get
+            {
+                var result = new GTFSLookupTables.pickup_typeDataTable();
+                result.Addpickup_typeRow("", "Regularly scheduled pickup (blank)");
+                result.Addpickup_typeRow("0", "Regularly scheduled pickup");
+                result.Addpickup_typeRow("1", "No pickup available");
+                result.Addpickup_typeRow("2", "Must phone agency to arrange pickup");
+                result.Addpickup_typeRow("3", "Must coordinate with driver to arrange pickup");
+                return result;
+            }
+        }
+        public static GTFSLookupTables.drop_off_typeDataTable drop_off_type
+        {
+            get
+            {
+                var result = new GTFSLookupTables.drop_off_typeDataTable();
+                result.Adddrop_off_typeRow("", "Regularly scheduled drop off (blank)");
+                result.Adddrop_off_typeRow("0", "Regularly scheduled drop off");
+                result.Adddrop_off_typeRow("1", "No drop off available");
+                result.Adddrop_off_typeRow("2", "Must phone agency to arrange drop off");
+                result.Adddrop_off_typeRow("3", "Must coordinate with driver to arrange drop off");
+                return result;
+            }
+        }
     }
 }

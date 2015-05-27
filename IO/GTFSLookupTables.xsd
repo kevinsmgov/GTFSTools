@@ -47,6 +47,22 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="pickup_type" msprop:Generator_TableClassName="pickup_typeDataTable" msprop:Generator_TableVarName="tablepickup_type" msprop:Generator_RowChangedName="pickup_typeRowChanged" msprop:Generator_TablePropName="pickup_type" msprop:Generator_RowDeletingName="pickup_typeRowDeleting" msprop:Generator_RowChangingName="pickup_typeRowChanging" msprop:Generator_RowEvHandlerName="pickup_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="pickup_typeRowDeleted" msprop:Generator_RowClassName="pickup_typeRow" msprop:Generator_UserTableName="pickup_type" msprop:Generator_RowEvArgName="pickup_typeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="Display" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="drop_off_type" msprop:Generator_TableClassName="drop_off_typeDataTable" msprop:Generator_TableVarName="tabledrop_off_type" msprop:Generator_RowChangedName="drop_off_typeRowChanged" msprop:Generator_TablePropName="drop_off_type" msprop:Generator_RowDeletingName="drop_off_typeRowDeleting" msprop:Generator_RowChangingName="drop_off_typeRowChanging" msprop:Generator_RowEvHandlerName="drop_off_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="drop_off_typeRowDeleted" msprop:Generator_RowClassName="drop_off_typeRow" msprop:Generator_UserTableName="drop_off_type" msprop:Generator_RowEvArgName="drop_off_typeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="Display" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

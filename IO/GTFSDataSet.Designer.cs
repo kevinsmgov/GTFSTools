@@ -641,7 +641,7 @@ namespace GTFSTools.IO {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_DataTable1_trips.txt", new global::System.Data.DataColumn[] {
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_blocks_trips.txt", new global::System.Data.DataColumn[] {
                         this.tableblocks.block_idColumn}, new global::System.Data.DataColumn[] {
                         this._tabletrips_txt.block_idColumn});
             this._tabletrips_txt.Constraints.Add(fkc);
