@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GISDataSet" targetNamespace="http://tempuri.org/GISDataSet.xsd" xmlns:mstns="http://tempuri.org/GISDataSet.xsd" xmlns="http://tempuri.org/GISDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GISDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="GISDataSet" msprop:Generator_UserDSName="GISDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="shapes.csv" msprop:Generator_TableClassName="_shapes_csvDataTable" msprop:Generator_TableVarName="_tableshapes_csv" msprop:Generator_TablePropName="_shapes_csv" msprop:Generator_RowDeletingName="_shapes_csvRowDeleting" msprop:Generator_RowChangingName="_shapes_csvRowChanging" msprop:Generator_RowEvHandlerName="_shapes_csvRowChangeEventHandler" msprop:Generator_RowDeletedName="_shapes_csvRowDeleted" msprop:Generator_UserTableName="shapes.csv" msprop:Generator_RowChangedName="_shapes_csvRowChanged" msprop:Generator_RowEvArgName="_shapes_csvRowChangeEvent" msprop:Generator_RowClassName="_shapes_csvRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="shape_id" msprop:Generator_ColumnVarNameInTable="columnshape_id" msprop:Generator_ColumnPropNameInRow="shape_id" msprop:Generator_ColumnPropNameInTable="shape_idColumn" msprop:Generator_UserColumnName="shape_id" type="xs:string" />
+              <xs:element name="WKT" msprop:Generator_ColumnVarNameInTable="columnWKT" msprop:Generator_ColumnPropNameInRow="WKT" msprop:Generator_ColumnPropNameInTable="WKTColumn" msprop:Generator_UserColumnName="WKT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="stops.csv" msprop:Generator_TableClassName="_stops_csvDataTable" msprop:Generator_TableVarName="_tablestops_csv" msprop:Generator_TablePropName="_stops_csv" msprop:Generator_RowDeletingName="_stops_csvRowDeleting" msprop:Generator_RowChangingName="_stops_csvRowChanging" msprop:Generator_RowEvHandlerName="_stops_csvRowChangeEventHandler" msprop:Generator_RowDeletedName="_stops_csvRowDeleted" msprop:Generator_UserTableName="stops.csv" msprop:Generator_RowChangedName="_stops_csvRowChanged" msprop:Generator_RowEvArgName="_stops_csvRowChangeEvent" msprop:Generator_RowClassName="_stops_csvRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="stop_id" msprop:Generator_ColumnVarNameInTable="columnstop_id" msprop:Generator_ColumnPropNameInRow="stop_id" msprop:Generator_ColumnPropNameInTable="stop_idColumn" msprop:Generator_UserColumnName="stop_id" type="xs:string" />
+              <xs:element name="stop_code" msprop:Generator_ColumnVarNameInTable="columnstop_code" msprop:Generator_ColumnPropNameInRow="stop_code" msprop:Generator_ColumnPropNameInTable="stop_codeColumn" msprop:Generator_UserColumnName="stop_code" type="xs:string" minOccurs="0" />
+              <xs:element name="stop_name" msprop:Generator_ColumnVarNameInTable="columnstop_name" msprop:Generator_ColumnPropNameInRow="stop_name" msprop:Generator_ColumnPropNameInTable="stop_nameColumn" msprop:Generator_UserColumnName="stop_name" type="xs:string" />
+              <xs:element name="stop_desc" msprop:Generator_ColumnVarNameInTable="columnstop_desc" msprop:Generator_ColumnPropNameInRow="stop_desc" msprop:Generator_ColumnPropNameInTable="stop_descColumn" msprop:Generator_UserColumnName="stop_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="zone_id" msprop:Generator_ColumnVarNameInTable="columnzone_id" msprop:Generator_ColumnPropNameInRow="zone_id" msprop:Generator_ColumnPropNameInTable="zone_idColumn" msprop:Generator_UserColumnName="zone_id" type="xs:string" minOccurs="0" />
+              <xs:element name="stop_url" msprop:Generator_ColumnVarNameInTable="columnstop_url" msprop:Generator_ColumnPropNameInRow="stop_url" msprop:Generator_ColumnPropNameInTable="stop_urlColumn" msprop:Generator_UserColumnName="stop_url" type="xs:string" minOccurs="0" />
+              <xs:element name="location_type" msdata:Caption="" msprop:Generator_ColumnVarNameInTable="columnlocation_type" msprop:Generator_ColumnPropNameInRow="location_type" msprop:Generator_ColumnPropNameInTable="location_typeColumn" msprop:Generator_UserColumnName="location_type" type="xs:string" minOccurs="0" />
+              <xs:element name="parent_station" msprop:Generator_ColumnVarNameInTable="columnparent_station" msprop:Generator_ColumnPropNameInRow="parent_station" msprop:Generator_ColumnPropNameInTable="parent_stationColumn" msprop:Generator_UserColumnName="parent_station" type="xs:string" minOccurs="0" />
+              <xs:element name="stop_timezone" msprop:Generator_ColumnVarNameInTable="columnstop_timezone" msprop:Generator_ColumnPropNameInRow="stop_timezone" msprop:Generator_ColumnPropNameInTable="stop_timezoneColumn" msprop:Generator_UserColumnName="stop_timezone" type="xs:string" minOccurs="0" />
+              <xs:element name="wheelchair_boarding" msprop:Generator_ColumnVarNameInTable="columnwheelchair_boarding" msprop:Generator_ColumnPropNameInRow="wheelchair_boarding" msprop:Generator_ColumnPropNameInTable="wheelchair_boardingColumn" msprop:Generator_UserColumnName="wheelchair_boarding" type="xs:string" minOccurs="0" />
+              <xs:element name="WKT" msprop:Generator_ColumnVarNameInTable="columnWKT" msprop:Generator_ColumnPropNameInRow="WKT" msprop:Generator_ColumnPropNameInTable="WKTColumn" msprop:Generator_UserColumnName="WKT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:shapes.csv" />
+      <xs:field xpath="mstns:shape_id" />
+    </xs:unique>
+    <xs:unique name="stops.csv_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:stops.csv" />
+      <xs:field xpath="mstns:stop_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

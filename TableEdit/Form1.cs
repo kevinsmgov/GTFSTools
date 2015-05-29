@@ -16,7 +16,7 @@ namespace TableEdit
 
         protected void BindDataGridViews()
         {
-            foreach(var bindingSource in new BindingSource[]{
+            foreach (var bindingSource in new BindingSource[]{
                 agencyBindingSource,
                 stopsBindingSource,
                 routesBindingSource,
@@ -47,14 +47,53 @@ namespace TableEdit
 
         private void toolStripMenuItemImportZip_Click(object sender, EventArgs e)
         {
-            var result = openFileDialog1.ShowDialog();
+            var result = openFileDialogGTFS.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 var previousCursor = this.Cursor;
                 this.Cursor = Cursors.WaitCursor;
-                gtfs = new GTFSTools.IO.GTFS(openFileDialog1.FileName);
+                gtfs = new GTFSTools.IO.GTFS(openFileDialogGTFS.FileName);
                 BindDataGridViews();
                 this.Cursor = previousCursor;
+            }
+        }
+
+        private void toolStripMenuItemImportFolder_Click(object sender, EventArgs e)
+        {
+            var result = folderBrowserDialog1.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                gtfs = new GTFSTools.IO.GTFS(folderBrowserDialog1.SelectedPath);
+                BindDataGridViews();
+                this.Cursor = previousCursor;
+            }
+        }
+
+        private void toolStripMenuItemExportZip_Click(object sender, EventArgs e)
+        {
+            var result = saveFileDialogGTFS.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                gtfs.Write(saveFileDialogGTFS.FileName);
+                this.Cursor = previousCursor;
+                MessageBox.Show("GTFS file exported", "Export Complete", MessageBoxButtons.OK);
+            }
+        }
+
+        private void toolStripMenuItemExportFolder_Click(object sender, EventArgs e)
+        {
+            var result = folderBrowserDialog1.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                gtfs.Write(folderBrowserDialog1.SelectedPath);
+                this.Cursor = previousCursor;
+                MessageBox.Show("GTFS folder exported", "Export Complete", MessageBoxButtons.OK);
             }
         }
 
@@ -93,6 +132,52 @@ namespace TableEdit
             else
             {
                 dataGridView[e.ColumnIndex, e.RowIndex].ErrorText = null;
+            }
+        }
+
+        private void toolStripMenuItemExportShapesCSV_Click(object sender, EventArgs e)
+        {
+            saveFileDialogShapes.DefaultExt = "csv";
+            saveFileDialogShapes.Filter = "Well Known Text|*.csv";
+            var result = saveFileDialogShapes.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var shapes = new GTFSTools.GIS.Shapes(gtfs.DataSet._shapes_txt);
+                try
+                {
+                    using (var stream = System.IO.File.Create(saveFileDialogShapes.FileName))
+                    {
+                        GTFSTools.IO.Extensions.WriteCSV(shapes.DataTable, stream);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Export Error", MessageBoxButtons.OK);
+
+                }
+                this.Cursor = previousCursor;
+            }
+        }
+
+        private void toolStripMenuItemImportShapesCSV_Click(object sender, EventArgs e)
+        {
+            openFileDialogShapes.DefaultExt = "csv";
+            openFileDialogShapes.Filter = "Well Known Text|*.csv";
+            var result = openFileDialogShapes.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var shapes = new GTFSTools.GIS.Shapes();
+                using (var stream = System.IO.File.OpenRead(openFileDialogShapes.FileName))
+                {
+                    GTFSTools.IO.Extensions.ReadCSV(shapes.DataTable, stream);
+                }
+                shapes.Update(gtfs.DataSet._shapes_txt);
+                BindDataGridViews();
+                this.Cursor = previousCursor;
             }
         }
     }
