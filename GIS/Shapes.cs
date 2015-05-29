@@ -53,5 +53,13 @@ namespace GTFSTools.GIS
                 }
             }
         }
+        public void ToSQLite(String FileName)
+        {
+            GTFSTools.GIS.SQLite.CreateFile(DataTable, FileName);
+        }
+        public void FromSQLite(String FileName)
+        {
+            GTFSTools.GIS.SQLite.ReadFile(DataTable, FileName);
+        }
     }
 }

@@ -180,5 +180,53 @@ namespace TableEdit
                 this.Cursor = previousCursor;
             }
         }
+
+        private void toolStripMenuItemExportShapesSQLite_Click(object sender, EventArgs e)
+        {
+            
+            saveFileDialogShapes.DefaultExt = "sqlite";
+            saveFileDialogShapes.Filter = "SQLite|*.sqlite";
+            var result = saveFileDialogShapes.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var shapes = new GTFSTools.GIS.Shapes(gtfs.DataSet._shapes_txt);
+                try
+                {
+                    shapes.ToSQLite(saveFileDialogShapes.FileName);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Export Error", MessageBoxButtons.OK);
+
+                }
+                this.Cursor = previousCursor;
+            }
+        }
+
+        private void toolStripMenuItemImportShapesSQLite_Click(object sender, EventArgs e)
+        {
+            openFileDialogShapes.DefaultExt = "sqlite";
+            openFileDialogShapes.Filter = "SQLite|*.sqlite";
+            var result = openFileDialogShapes.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var shapes = new GTFSTools.GIS.Shapes();
+                try
+                {
+                    shapes.FromSQLite(openFileDialogShapes.FileName);
+                    shapes.Update(gtfs.DataSet._shapes_txt);
+                    BindDataGridViews();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Import Error", MessageBoxButtons.OK);
+                }
+                this.Cursor = previousCursor;
+            }
+        }
     }
 }
