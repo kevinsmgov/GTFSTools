@@ -101,5 +101,15 @@ namespace GTFSTools.IO
                 return result;
             }
         }
+        public static GTFSLookupTables.exception_typeDataTable exception_type
+        {
+            get
+            {
+                var result = new GTFSLookupTables.exception_typeDataTable();
+                result.Addexception_typeRow("1", "Add");
+                result.Addexception_typeRow("2", "Remove");
+                return result;
+            }
+        }
     }
 }

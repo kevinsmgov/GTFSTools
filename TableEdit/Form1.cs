@@ -74,6 +74,7 @@ namespace TableEdit
             drop_off_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.drop_off_type;
             wheelchair_accessibleBindingSource.DataSource = GTFSTools.IO.LookupTables.wheelchair_accessible;
             bikes_allowedBindingSource.DataSource = GTFSTools.IO.LookupTables.bikes_allowed;
+            exception_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.exception_type;
             BindDataGridViews();
         }
 
