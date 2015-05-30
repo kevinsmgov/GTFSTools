@@ -105,15 +105,18 @@ namespace TableEdit
             //gtfs.DataSet._shapes_txt.Constraints.Remove("FK_paths_shapes.txt");
             //gtfs.DataSet._trips_txt.Constraints.Remove("FK_blocks_trips.txt");
             //gtfs.DataSet._trips_txt.Constraints.Remove("FK_paths_trips.txt");
-            time_zoneBindingSource.DataSource = GTFSTools.IO.LookupTables.time_zones;
-            languageBindingSource.DataSource = GTFSTools.IO.LookupTables.languages;
-            location_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.location_types;
-            wheelchair_boardingBindingSource.DataSource = GTFSTools.IO.LookupTables.wheelchair_boardings;
-            pickup_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.pickup_type;
-            drop_off_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.drop_off_type;
-            wheelchair_accessibleBindingSource.DataSource = GTFSTools.IO.LookupTables.wheelchair_accessible;
-            bikes_allowedBindingSource.DataSource = GTFSTools.IO.LookupTables.bikes_allowed;
-            exception_typeBindingSource.DataSource = GTFSTools.IO.LookupTables.exception_type;
+
+            var lookupTables = new GTFSTools.IO.LookupTables();
+            time_zoneBindingSource.DataSource = lookupTables.time_zones;
+            languageBindingSource.DataSource = lookupTables.languages;
+            location_typeBindingSource.DataSource = lookupTables.location_types;
+            wheelchair_boardingBindingSource.DataSource = lookupTables.wheelchair_boardings;
+            pickup_typeBindingSource.DataSource = lookupTables.pickup_types;
+            drop_off_typeBindingSource.DataSource = lookupTables.drop_off_types;
+            wheelchair_accessibleBindingSource.DataSource = lookupTables.wheelchair_accessible;
+            bikes_allowedBindingSource.DataSource = lookupTables.bikes_allowed;
+            exception_typeBindingSource.DataSource = lookupTables.exception_types;
+            route_typesBindingSource.DataSource = lookupTables.route_types;
             BindDataGridViews();
         }
 
