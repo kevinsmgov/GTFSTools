@@ -3236,6 +3236,10 @@
     <UTC_x0020_offset>+00:00</UTC_x0020_offset>
   </time_zone>
   <language>
+    <ISO_x0020_639-1_x0020_Code></ISO_x0020_639-1_x0020_Code>
+    <English_x0020_name_x0020_of_x0020_Language></English_x0020_name_x0020_of_x0020_Language>
+  </language>
+  <language>
     <ISO_x0020_639-1_x0020_Code>aa</ISO_x0020_639-1_x0020_Code>
     <English_x0020_name_x0020_of_x0020_Language>Afar</English_x0020_name_x0020_of_x0020_Language>
   </language>
@@ -4199,4 +4203,48 @@
     <Display>Funicular</Display>
     <Description>Any rail system designed for steep inclines</Description>
   </route_type>
+  <payment_method>
+    <Value>0</Value>
+    <Display>Fare is paid on board</Display>
+  </payment_method>
+  <payment_method>
+    <Value>1</Value>
+    <Display>Fare must be paid before boarding</Display>
+  </payment_method>
+  <transfers>
+    <Value></Value>
+    <Display>Unlimited</Display>
+  </transfers>
+  <transfers>
+    <Value>0</Value>
+    <Display>No transfers permitted on this fare</Display>
+  </transfers>
+  <transfers>
+    <Value>1</Value>
+    <Display>Passenger may transfer once</Display>
+  </transfers>
+  <transfers>
+    <Value>2</Value>
+    <Display>Passenger may transfer twice</Display>
+  </transfers>
+  <transfer_type>
+    <Value></Value>
+    <Display>Recommended (blank)</Display>
+  </transfer_type>
+  <transfer_type>
+    <Value>0</Value>
+    <Display>Recommended</Display>
+  </transfer_type>
+  <transfer_type>
+    <Value>1</Value>
+    <Display>Timed - Wait</Display>
+  </transfer_type>
+  <transfer_type>
+    <Value>2</Value>
+    <Display>Minimum Transfer Time</Display>
+  </transfer_type>
+  <transfer_type>
+    <Value>3</Value>
+    <Display>No Transfer</Display>
+  </transfer_type>
 </GTFSLookupTables>

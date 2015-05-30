@@ -83,5 +83,26 @@ namespace GTFSTools.IO
                 return lookupTables.route_type;
             }
         }
+        public GTFSLookupTables.payment_methodDataTable payment_methods
+        {
+            get
+            {
+                return lookupTables.payment_method;
+            }
+        }
+        public GTFSLookupTables.transfersDataTable transfers
+        {
+            get
+            {
+                return lookupTables.transfers;
+            }
+        }
+        public GTFSLookupTables.transfer_typeDataTable transfer_type
+        {
+            get
+            {
+                return lookupTables.transfer_type;
+            }
+        }
     }
 }

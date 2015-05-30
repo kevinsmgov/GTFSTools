@@ -17,19 +17,19 @@ namespace TableEdit
         protected void BindDataGridViews()
         {
             foreach (var bindingSource in new BindingSource[]{
-                agencyBindingSource,
-                stopsBindingSource,
-                routesBindingSource,
-                tripsBindingSource,
-                stop_timesBindingSource,
-                calendarBindingSource,
-                calendar_dateBindingSource,
-                fare_attributesDindingSource,
-                fare_rulesBindingSource,
-                shapesBindingSource,
-                frequenciesBindingSource,
-                transfersBindingSource,
-                feed_infoBindingSource,
+                _agency_txtBindingSource,
+                _stops_txtBindingSource,
+                _routes_txtBindingSource,
+                _trips_txtBindingSource,
+                _stop_times_txtBindingSource,
+                _calendar_txtBindingSource,
+                _calendar_dates_txtBindingSource,
+                _fare_attributes_txtDindingSource,
+                _fare_rules_txtBindingSource,
+                _shapes_txtBindingSource,
+                _frequencies_txtBindingSource,
+                _transfers_txtBindingSource,
+                _feed_info_txtBindingSource,
                 pathsBindingSource
             }) { bindingSource.DataSource = gtfs.DataSet; }
         }
@@ -107,16 +107,21 @@ namespace TableEdit
             //gtfs.DataSet._trips_txt.Constraints.Remove("FK_paths_trips.txt");
 
             var lookupTables = new GTFSTools.IO.LookupTables();
-            time_zoneBindingSource.DataSource = lookupTables.time_zones;
-            languageBindingSource.DataSource = lookupTables.languages;
-            location_typeBindingSource.DataSource = lookupTables.location_types;
-            wheelchair_boardingBindingSource.DataSource = lookupTables.wheelchair_boardings;
-            pickup_typeBindingSource.DataSource = lookupTables.pickup_types;
-            drop_off_typeBindingSource.DataSource = lookupTables.drop_off_types;
-            wheelchair_accessibleBindingSource.DataSource = lookupTables.wheelchair_accessible;
-            bikes_allowedBindingSource.DataSource = lookupTables.bikes_allowed;
-            exception_typeBindingSource.DataSource = lookupTables.exception_types;
-            route_typesBindingSource.DataSource = lookupTables.route_types;
+            foreach (var lookup in new Dictionary<BindingSource, DataTable> { 
+            {time_zoneBindingSource, lookupTables.time_zones},
+            {languageBindingSource, lookupTables.languages},
+            {location_typeBindingSource, lookupTables.location_types},
+            {wheelchair_boardingBindingSource, lookupTables.wheelchair_boardings},
+            {pickup_typeBindingSource, lookupTables.pickup_types},
+            {drop_off_typeBindingSource, lookupTables.drop_off_types},
+            {wheelchair_accessibleBindingSource, lookupTables.wheelchair_accessible},
+            {bikes_allowedBindingSource, lookupTables.bikes_allowed},
+            {exception_typeBindingSource, lookupTables.exception_types},
+            {route_typesBindingSource, lookupTables.route_types},
+            {payment_methodsBindingSource, lookupTables.payment_methods},
+            {transfersBindingSource, lookupTables.transfers},
+            {transfer_typeBindingSource, lookupTables.transfer_type}
+            }) { lookup.Key.DataSource = lookup.Value; }
             BindDataGridViews();
         }
 
@@ -185,7 +190,7 @@ namespace TableEdit
 
         private void toolStripMenuItemExportShapesSQLite_Click(object sender, EventArgs e)
         {
-            
+
             saveFileDialogGIS.DefaultExt = "sqlite";
             saveFileDialogGIS.Filter = "SQLite|*.sqlite";
             var result = saveFileDialogGIS.ShowDialog();

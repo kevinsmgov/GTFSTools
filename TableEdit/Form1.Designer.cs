@@ -37,6 +37,9 @@
             this.toolStripMenuItemImportShapes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemImportShapesCSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemImportShapesSQLite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportStops = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportStopsCSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportStopsSQLite = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportZip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportFolder = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,13 +82,16 @@
             this.saveFileDialogGTFS = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialogGIS = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogShapes = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripMenuItemImportStops = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemImportStopsCSV = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemImportStopsSQLite = new System.Windows.Forms.ToolStripMenuItem();
-            this.route_typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agencyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agencynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agencyurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agencytimezoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.time_zoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agencylangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.languageBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agencyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agencyphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agencyfareurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._agency_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stopidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stopcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stopnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,11 +106,21 @@
             this.stoptimezoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.wheelchairboardingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.wheelchair_boardingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stopsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.routesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._stops_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.routeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.routeshortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routelongnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routedescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routetypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.route_typesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.routeurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routecolorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routetextcolorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._routes_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.routeidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.serviceidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.calendarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._calendar_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tripidDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tripheadsignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tripshortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -116,7 +132,7 @@
             this.wheelchair_accessibleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bikesallowedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bikes_allowedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tripsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._trips_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tripidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.arrivaltimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.departuretimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -129,7 +145,7 @@
             this.drop_off_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shapedisttraveledDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timepointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stop_timesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._stop_times_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.serviceidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mondayDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tuesdayDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -144,60 +160,47 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exceptiontypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.exception_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.calendar_dateBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._calendar_dates_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fareidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currencytypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paymentmethodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transfersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentmethodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.payment_methodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transfersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.transfersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transferdurationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fare_attributesDindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._fare_attributes_txtDindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fareidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routeidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.routeidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.originidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destinationidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.containsidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fare_rulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._fare_rules_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shapeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shapeptlatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shapeptlonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shapeptsequenceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shapedisttraveledDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shapesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tripidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._shapes_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tripidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.starttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endtimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.headwaysecsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exacttimesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frequenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fromstopidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tostopidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transfertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._frequencies_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._transfers_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._feed_info_txtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.transfer_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fromstopidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.tostopidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.transfertypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.mintransfertimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transfersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.feedpublishernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feedpublisherurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.feedlangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.feedlangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.feedstartdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feedenddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.feedversionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.feed_infoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.routeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.routeshortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routelongnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routedescDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routetypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.routeurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routecolorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.routetextcolorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agencyidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agencynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agencyurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agencytimezoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.agencylangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.agencyphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agencyfareurlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.feed_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedInfo)).BeginInit();
@@ -226,30 +229,33 @@
             this.tabControl1.SuspendLayout();
             this.trips.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrips)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.route_typesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.time_zoneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.languageBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._agency_txtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.location_typeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wheelchair_boardingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stopsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._stops_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.route_typesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._routes_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._calendar_txtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wheelchair_accessibleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bikes_allowedBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tripsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._trips_txtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickup_typeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drop_off_typeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stop_timesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._stop_times_txtBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exception_typeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calendar_dateBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fare_attributesDindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fare_rulesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shapesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._calendar_dates_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.payment_methodsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transfersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.feed_infoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._fare_attributes_txtDindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._fare_rules_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._shapes_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._frequencies_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._transfers_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._feed_info_txtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transfer_typeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -319,6 +325,29 @@
             this.toolStripMenuItemImportShapesSQLite.Size = new System.Drawing.Size(108, 22);
             this.toolStripMenuItemImportShapesSQLite.Text = "SQLite";
             this.toolStripMenuItemImportShapesSQLite.Click += new System.EventHandler(this.toolStripMenuItemImportShapesSQLite_Click);
+            // 
+            // toolStripMenuItemImportStops
+            // 
+            this.toolStripMenuItemImportStops.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemImportStopsCSV,
+            this.toolStripMenuItemImportStopsSQLite});
+            this.toolStripMenuItemImportStops.Name = "toolStripMenuItemImportStops";
+            this.toolStripMenuItemImportStops.Size = new System.Drawing.Size(111, 22);
+            this.toolStripMenuItemImportStops.Text = "Stops";
+            // 
+            // toolStripMenuItemImportStopsCSV
+            // 
+            this.toolStripMenuItemImportStopsCSV.Name = "toolStripMenuItemImportStopsCSV";
+            this.toolStripMenuItemImportStopsCSV.Size = new System.Drawing.Size(108, 22);
+            this.toolStripMenuItemImportStopsCSV.Text = "CSV";
+            this.toolStripMenuItemImportStopsCSV.Click += new System.EventHandler(this.toolStripMenuItemImportStopsCSV_Click);
+            // 
+            // toolStripMenuItemImportStopsSQLite
+            // 
+            this.toolStripMenuItemImportStopsSQLite.Name = "toolStripMenuItemImportStopsSQLite";
+            this.toolStripMenuItemImportStopsSQLite.Size = new System.Drawing.Size(108, 22);
+            this.toolStripMenuItemImportStopsSQLite.Text = "SQLite";
+            this.toolStripMenuItemImportStopsSQLite.Click += new System.EventHandler(this.toolStripMenuItemImportStopsSQLite_Click);
             // 
             // exportToolStripMenuItem
             // 
@@ -426,7 +455,7 @@
             this.feedstartdateDataGridViewTextBoxColumn,
             this.feedenddateDataGridViewTextBoxColumn,
             this.feedversionDataGridViewTextBoxColumn});
-            this.dataGridViewFeedInfo.DataSource = this.feed_infoBindingSource;
+            this.dataGridViewFeedInfo.DataSource = this._feed_info_txtBindingSource;
             this.dataGridViewFeedInfo.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewFeedInfo.Name = "dataGridViewFeedInfo";
             this.dataGridViewFeedInfo.Size = new System.Drawing.Size(648, 170);
@@ -455,7 +484,7 @@
             this.tostopidDataGridViewTextBoxColumn,
             this.transfertypeDataGridViewTextBoxColumn,
             this.mintransfertimeDataGridViewTextBoxColumn});
-            this.dataGridViewTransfers.DataSource = this.transfersBindingSource;
+            this.dataGridViewTransfers.DataSource = this._transfers_txtBindingSource;
             this.dataGridViewTransfers.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewTransfers.Name = "dataGridViewTransfers";
             this.dataGridViewTransfers.Size = new System.Drawing.Size(648, 170);
@@ -485,7 +514,7 @@
             this.endtimeDataGridViewTextBoxColumn,
             this.headwaysecsDataGridViewTextBoxColumn,
             this.exacttimesDataGridViewTextBoxColumn});
-            this.dataGridViewFrequencies.DataSource = this.frequenciesBindingSource;
+            this.dataGridViewFrequencies.DataSource = this._frequencies_txtBindingSource;
             this.dataGridViewFrequencies.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewFrequencies.Name = "dataGridViewFrequencies";
             this.dataGridViewFrequencies.Size = new System.Drawing.Size(648, 170);
@@ -515,7 +544,7 @@
             this.shapeptlonDataGridViewTextBoxColumn,
             this.shapeptsequenceDataGridViewTextBoxColumn,
             this.shapedisttraveledDataGridViewTextBoxColumn});
-            this.dataGridViewShapes.DataSource = this.shapesBindingSource;
+            this.dataGridViewShapes.DataSource = this._shapes_txtBindingSource;
             this.dataGridViewShapes.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewShapes.Name = "dataGridViewShapes";
             this.dataGridViewShapes.Size = new System.Drawing.Size(648, 170);
@@ -545,7 +574,7 @@
             this.originidDataGridViewTextBoxColumn,
             this.destinationidDataGridViewTextBoxColumn,
             this.containsidDataGridViewTextBoxColumn});
-            this.dataGridViewFareRules.DataSource = this.fare_rulesBindingSource;
+            this.dataGridViewFareRules.DataSource = this._fare_rules_txtBindingSource;
             this.dataGridViewFareRules.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewFareRules.Name = "dataGridViewFareRules";
             this.dataGridViewFareRules.Size = new System.Drawing.Size(648, 170);
@@ -576,7 +605,7 @@
             this.paymentmethodDataGridViewTextBoxColumn,
             this.transfersDataGridViewTextBoxColumn,
             this.transferdurationDataGridViewTextBoxColumn});
-            this.dataGridViewFareAttributes.DataSource = this.fare_attributesDindingSource;
+            this.dataGridViewFareAttributes.DataSource = this._fare_attributes_txtDindingSource;
             this.dataGridViewFareAttributes.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewFareAttributes.Name = "dataGridViewFareAttributes";
             this.dataGridViewFareAttributes.Size = new System.Drawing.Size(648, 170);
@@ -604,7 +633,7 @@
             this.serviceidDataGridViewTextBoxColumn1,
             this.dateDataGridViewTextBoxColumn,
             this.exceptiontypeDataGridViewTextBoxColumn});
-            this.dataGridViewCalendarDates.DataSource = this.calendar_dateBindingSource;
+            this.dataGridViewCalendarDates.DataSource = this._calendar_dates_txtBindingSource;
             this.dataGridViewCalendarDates.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewCalendarDates.Name = "dataGridViewCalendarDates";
             this.dataGridViewCalendarDates.Size = new System.Drawing.Size(648, 170);
@@ -639,7 +668,7 @@
             this.sundayDataGridViewCheckBoxColumn,
             this.startdateDataGridViewTextBoxColumn,
             this.enddateDataGridViewTextBoxColumn});
-            this.dataGridViewCalendar.DataSource = this.calendarBindingSource;
+            this.dataGridViewCalendar.DataSource = this._calendar_txtBindingSource;
             this.dataGridViewCalendar.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewCalendar.Name = "dataGridViewCalendar";
             this.dataGridViewCalendar.Size = new System.Drawing.Size(648, 170);
@@ -674,7 +703,7 @@
             this.dropofftypeDataGridViewTextBoxColumn,
             this.shapedisttraveledDataGridViewTextBoxColumn1,
             this.timepointDataGridViewTextBoxColumn});
-            this.dataGridViewStopTimes.DataSource = this.stop_timesBindingSource;
+            this.dataGridViewStopTimes.DataSource = this._stop_times_txtBindingSource;
             this.dataGridViewStopTimes.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewStopTimes.Name = "dataGridViewStopTimes";
             this.dataGridViewStopTimes.Size = new System.Drawing.Size(648, 170);
@@ -708,7 +737,7 @@
             this.routeurlDataGridViewTextBoxColumn,
             this.routecolorDataGridViewTextBoxColumn,
             this.routetextcolorDataGridViewTextBoxColumn});
-            this.dataGridViewRoutes.DataSource = this.routesBindingSource;
+            this.dataGridViewRoutes.DataSource = this._routes_txtBindingSource;
             this.dataGridViewRoutes.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewRoutes.Name = "dataGridViewRoutes";
             this.dataGridViewRoutes.Size = new System.Drawing.Size(648, 170);
@@ -746,7 +775,7 @@
             this.parentstationDataGridViewTextBoxColumn,
             this.stoptimezoneDataGridViewTextBoxColumn,
             this.wheelchairboardingDataGridViewTextBoxColumn});
-            this.dataGridViewStops.DataSource = this.stopsBindingSource;
+            this.dataGridViewStops.DataSource = this._stops_txtBindingSource;
             this.dataGridViewStops.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewStops.Name = "dataGridViewStops";
             this.dataGridViewStops.Size = new System.Drawing.Size(648, 170);
@@ -779,7 +808,7 @@
             this.agencylangDataGridViewTextBoxColumn,
             this.agencyphoneDataGridViewTextBoxColumn,
             this.agencyfareurlDataGridViewTextBoxColumn});
-            this.dataGridViewAgency.DataSource = this.agencyBindingSource;
+            this.dataGridViewAgency.DataSource = this._agency_txtBindingSource;
             this.dataGridViewAgency.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewAgency.Name = "dataGridViewAgency";
             this.dataGridViewAgency.Size = new System.Drawing.Size(648, 170);
@@ -838,7 +867,7 @@
             this.shapeidDataGridViewTextBoxColumn1,
             this.wheelchairaccessibleDataGridViewTextBoxColumn,
             this.bikesallowedDataGridViewTextBoxColumn});
-            this.dataGridViewTrips.DataSource = this.tripsBindingSource;
+            this.dataGridViewTrips.DataSource = this._trips_txtBindingSource;
             this.dataGridViewTrips.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewTrips.Name = "dataGridViewTrips";
             this.dataGridViewTrips.Size = new System.Drawing.Size(648, 170);
@@ -848,48 +877,73 @@
             // 
             this.saveFileDialogGTFS.DefaultExt = "zip";
             // 
-            // toolStripMenuItemImportStops
+            // agencyidDataGridViewTextBoxColumn
             // 
-            this.toolStripMenuItemImportStops.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemImportStopsCSV,
-            this.toolStripMenuItemImportStopsSQLite});
-            this.toolStripMenuItemImportStops.Name = "toolStripMenuItemImportStops";
-            this.toolStripMenuItemImportStops.Size = new System.Drawing.Size(111, 22);
-            this.toolStripMenuItemImportStops.Text = "Stops";
+            this.agencyidDataGridViewTextBoxColumn.DataPropertyName = "agency_id";
+            this.agencyidDataGridViewTextBoxColumn.HeaderText = "agency_id";
+            this.agencyidDataGridViewTextBoxColumn.Name = "agencyidDataGridViewTextBoxColumn";
             // 
-            // toolStripMenuItemImportStopsCSV
+            // agencynameDataGridViewTextBoxColumn
             // 
-            this.toolStripMenuItemImportStopsCSV.Name = "toolStripMenuItemImportStopsCSV";
-            this.toolStripMenuItemImportStopsCSV.Size = new System.Drawing.Size(108, 22);
-            this.toolStripMenuItemImportStopsCSV.Text = "CSV";
-            this.toolStripMenuItemImportStopsCSV.Click += new System.EventHandler(this.toolStripMenuItemImportStopsCSV_Click);
+            this.agencynameDataGridViewTextBoxColumn.DataPropertyName = "agency_name";
+            this.agencynameDataGridViewTextBoxColumn.HeaderText = "agency_name";
+            this.agencynameDataGridViewTextBoxColumn.Name = "agencynameDataGridViewTextBoxColumn";
             // 
-            // toolStripMenuItemImportStopsSQLite
+            // agencyurlDataGridViewTextBoxColumn
             // 
-            this.toolStripMenuItemImportStopsSQLite.Name = "toolStripMenuItemImportStopsSQLite";
-            this.toolStripMenuItemImportStopsSQLite.Size = new System.Drawing.Size(108, 22);
-            this.toolStripMenuItemImportStopsSQLite.Text = "SQLite";
-            this.toolStripMenuItemImportStopsSQLite.Click += new System.EventHandler(this.toolStripMenuItemImportStopsSQLite_Click);
+            this.agencyurlDataGridViewTextBoxColumn.DataPropertyName = "agency_url";
+            this.agencyurlDataGridViewTextBoxColumn.HeaderText = "agency_url";
+            this.agencyurlDataGridViewTextBoxColumn.Name = "agencyurlDataGridViewTextBoxColumn";
+            this.agencyurlDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // route_typesBindingSource
+            // agencytimezoneDataGridViewTextBoxColumn
             // 
-            this.route_typesBindingSource.DataMember = "route_type";
-            this.route_typesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            this.agencytimezoneDataGridViewTextBoxColumn.DataPropertyName = "agency_timezone";
+            this.agencytimezoneDataGridViewTextBoxColumn.DataSource = this.time_zoneBindingSource;
+            this.agencytimezoneDataGridViewTextBoxColumn.DisplayMember = "TZ";
+            this.agencytimezoneDataGridViewTextBoxColumn.HeaderText = "agency_timezone";
+            this.agencytimezoneDataGridViewTextBoxColumn.Name = "agencytimezoneDataGridViewTextBoxColumn";
+            this.agencytimezoneDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.agencytimezoneDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.agencytimezoneDataGridViewTextBoxColumn.ValueMember = "TZ";
             // 
             // time_zoneBindingSource
             // 
             this.time_zoneBindingSource.DataMember = "time_zone";
             this.time_zoneBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
+            // agencylangDataGridViewTextBoxColumn
+            // 
+            this.agencylangDataGridViewTextBoxColumn.DataPropertyName = "agency_lang";
+            this.agencylangDataGridViewTextBoxColumn.DataSource = this.languageBindingSource;
+            this.agencylangDataGridViewTextBoxColumn.DisplayMember = "English name of Language";
+            this.agencylangDataGridViewTextBoxColumn.HeaderText = "agency_lang";
+            this.agencylangDataGridViewTextBoxColumn.Name = "agencylangDataGridViewTextBoxColumn";
+            this.agencylangDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.agencylangDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.agencylangDataGridViewTextBoxColumn.ValueMember = "ISO 639-1 Code";
+            // 
             // languageBindingSource
             // 
             this.languageBindingSource.DataMember = "language";
             this.languageBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
-            // agencyBindingSource
+            // agencyphoneDataGridViewTextBoxColumn
             // 
-            this.agencyBindingSource.DataMember = "agency.txt";
-            this.agencyBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this.agencyphoneDataGridViewTextBoxColumn.DataPropertyName = "agency_phone";
+            this.agencyphoneDataGridViewTextBoxColumn.HeaderText = "agency_phone";
+            this.agencyphoneDataGridViewTextBoxColumn.Name = "agencyphoneDataGridViewTextBoxColumn";
+            // 
+            // agencyfareurlDataGridViewTextBoxColumn
+            // 
+            this.agencyfareurlDataGridViewTextBoxColumn.DataPropertyName = "agency_fare_url";
+            this.agencyfareurlDataGridViewTextBoxColumn.HeaderText = "agency_fare_url";
+            this.agencyfareurlDataGridViewTextBoxColumn.Name = "agencyfareurlDataGridViewTextBoxColumn";
+            // 
+            // _agency_txtBindingSource
+            // 
+            this._agency_txtBindingSource.DataMember = "agency.txt";
+            this._agency_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // stopidDataGridViewTextBoxColumn
             // 
@@ -988,20 +1042,89 @@
             this.wheelchair_boardingBindingSource.DataMember = "wheelchair_boarding";
             this.wheelchair_boardingBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
-            // stopsBindingSource
+            // _stops_txtBindingSource
             // 
-            this.stopsBindingSource.DataMember = "stops.txt";
-            this.stopsBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._stops_txtBindingSource.DataMember = "stops.txt";
+            this._stops_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
-            // routesBindingSource
+            // routeidDataGridViewTextBoxColumn
             // 
-            this.routesBindingSource.DataMember = "routes.txt";
-            this.routesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this.routeidDataGridViewTextBoxColumn.DataPropertyName = "route_id";
+            this.routeidDataGridViewTextBoxColumn.HeaderText = "route_id";
+            this.routeidDataGridViewTextBoxColumn.Name = "routeidDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "agency_id";
+            this.dataGridViewTextBoxColumn20.DataSource = this._agency_txtBindingSource;
+            this.dataGridViewTextBoxColumn20.DisplayMember = "agency_name";
+            this.dataGridViewTextBoxColumn20.HeaderText = "agency_id";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn20.ValueMember = "agency_id";
+            // 
+            // routeshortnameDataGridViewTextBoxColumn
+            // 
+            this.routeshortnameDataGridViewTextBoxColumn.DataPropertyName = "route_short_name";
+            this.routeshortnameDataGridViewTextBoxColumn.HeaderText = "route_short_name";
+            this.routeshortnameDataGridViewTextBoxColumn.Name = "routeshortnameDataGridViewTextBoxColumn";
+            // 
+            // routelongnameDataGridViewTextBoxColumn
+            // 
+            this.routelongnameDataGridViewTextBoxColumn.DataPropertyName = "route_long_name";
+            this.routelongnameDataGridViewTextBoxColumn.HeaderText = "route_long_name";
+            this.routelongnameDataGridViewTextBoxColumn.Name = "routelongnameDataGridViewTextBoxColumn";
+            // 
+            // routedescDataGridViewTextBoxColumn
+            // 
+            this.routedescDataGridViewTextBoxColumn.DataPropertyName = "route_desc";
+            this.routedescDataGridViewTextBoxColumn.HeaderText = "route_desc";
+            this.routedescDataGridViewTextBoxColumn.Name = "routedescDataGridViewTextBoxColumn";
+            // 
+            // routetypeDataGridViewTextBoxColumn
+            // 
+            this.routetypeDataGridViewTextBoxColumn.DataPropertyName = "route_type";
+            this.routetypeDataGridViewTextBoxColumn.DataSource = this.route_typesBindingSource;
+            this.routetypeDataGridViewTextBoxColumn.DisplayMember = "Display";
+            this.routetypeDataGridViewTextBoxColumn.HeaderText = "route_type";
+            this.routetypeDataGridViewTextBoxColumn.Name = "routetypeDataGridViewTextBoxColumn";
+            this.routetypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.routetypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.routetypeDataGridViewTextBoxColumn.ValueMember = "Value";
+            // 
+            // route_typesBindingSource
+            // 
+            this.route_typesBindingSource.DataMember = "route_type";
+            this.route_typesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
+            // 
+            // routeurlDataGridViewTextBoxColumn
+            // 
+            this.routeurlDataGridViewTextBoxColumn.DataPropertyName = "route_url";
+            this.routeurlDataGridViewTextBoxColumn.HeaderText = "route_url";
+            this.routeurlDataGridViewTextBoxColumn.Name = "routeurlDataGridViewTextBoxColumn";
+            // 
+            // routecolorDataGridViewTextBoxColumn
+            // 
+            this.routecolorDataGridViewTextBoxColumn.DataPropertyName = "route_color";
+            this.routecolorDataGridViewTextBoxColumn.HeaderText = "route_color";
+            this.routecolorDataGridViewTextBoxColumn.Name = "routecolorDataGridViewTextBoxColumn";
+            // 
+            // routetextcolorDataGridViewTextBoxColumn
+            // 
+            this.routetextcolorDataGridViewTextBoxColumn.DataPropertyName = "route_text_color";
+            this.routetextcolorDataGridViewTextBoxColumn.HeaderText = "route_text_color";
+            this.routetextcolorDataGridViewTextBoxColumn.Name = "routetextcolorDataGridViewTextBoxColumn";
+            // 
+            // _routes_txtBindingSource
+            // 
+            this._routes_txtBindingSource.DataMember = "routes.txt";
+            this._routes_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // routeidDataGridViewTextBoxColumn2
             // 
             this.routeidDataGridViewTextBoxColumn2.DataPropertyName = "route_id";
-            this.routeidDataGridViewTextBoxColumn2.DataSource = this.routesBindingSource;
+            this.routeidDataGridViewTextBoxColumn2.DataSource = this._routes_txtBindingSource;
             this.routeidDataGridViewTextBoxColumn2.DisplayMember = "route_short_name";
             this.routeidDataGridViewTextBoxColumn2.HeaderText = "route_id";
             this.routeidDataGridViewTextBoxColumn2.Name = "routeidDataGridViewTextBoxColumn2";
@@ -1012,7 +1135,7 @@
             // serviceidDataGridViewTextBoxColumn2
             // 
             this.serviceidDataGridViewTextBoxColumn2.DataPropertyName = "service_id";
-            this.serviceidDataGridViewTextBoxColumn2.DataSource = this.calendarBindingSource;
+            this.serviceidDataGridViewTextBoxColumn2.DataSource = this._calendar_txtBindingSource;
             this.serviceidDataGridViewTextBoxColumn2.DisplayMember = "service_id";
             this.serviceidDataGridViewTextBoxColumn2.HeaderText = "service_id";
             this.serviceidDataGridViewTextBoxColumn2.Name = "serviceidDataGridViewTextBoxColumn2";
@@ -1020,10 +1143,10 @@
             this.serviceidDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.serviceidDataGridViewTextBoxColumn2.ValueMember = "service_id";
             // 
-            // calendarBindingSource
+            // _calendar_txtBindingSource
             // 
-            this.calendarBindingSource.DataMember = "calendar.txt";
-            this.calendarBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._calendar_txtBindingSource.DataMember = "calendar.txt";
+            this._calendar_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // tripidDataGridViewTextBoxColumn2
             // 
@@ -1108,15 +1231,15 @@
             this.bikes_allowedBindingSource.DataMember = "bikes_allowed";
             this.bikes_allowedBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
-            // tripsBindingSource
+            // _trips_txtBindingSource
             // 
-            this.tripsBindingSource.DataMember = "trips.txt";
-            this.tripsBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._trips_txtBindingSource.DataMember = "trips.txt";
+            this._trips_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // tripidDataGridViewTextBoxColumn1
             // 
             this.tripidDataGridViewTextBoxColumn1.DataPropertyName = "trip_id";
-            this.tripidDataGridViewTextBoxColumn1.DataSource = this.tripsBindingSource;
+            this.tripidDataGridViewTextBoxColumn1.DataSource = this._trips_txtBindingSource;
             this.tripidDataGridViewTextBoxColumn1.DisplayMember = "trip_id";
             this.tripidDataGridViewTextBoxColumn1.HeaderText = "trip_id";
             this.tripidDataGridViewTextBoxColumn1.Name = "tripidDataGridViewTextBoxColumn1";
@@ -1139,7 +1262,7 @@
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "stop_id";
-            this.dataGridViewTextBoxColumn21.DataSource = this.stopsBindingSource;
+            this.dataGridViewTextBoxColumn21.DataSource = this._stops_txtBindingSource;
             this.dataGridViewTextBoxColumn21.DisplayMember = "stop_name";
             this.dataGridViewTextBoxColumn21.HeaderText = "stop_id";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
@@ -1203,10 +1326,10 @@
             this.timepointDataGridViewTextBoxColumn.HeaderText = "timepoint";
             this.timepointDataGridViewTextBoxColumn.Name = "timepointDataGridViewTextBoxColumn";
             // 
-            // stop_timesBindingSource
+            // _stop_times_txtBindingSource
             // 
-            this.stop_timesBindingSource.DataMember = "stop_times.txt";
-            this.stop_timesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._stop_times_txtBindingSource.DataMember = "stop_times.txt";
+            this._stop_times_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // serviceidDataGridViewTextBoxColumn
             // 
@@ -1296,10 +1419,10 @@
             this.exception_typeBindingSource.DataMember = "exception_type";
             this.exception_typeBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
-            // calendar_dateBindingSource
+            // _calendar_dates_txtBindingSource
             // 
-            this.calendar_dateBindingSource.DataMember = "calendar_dates.txt";
-            this.calendar_dateBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._calendar_dates_txtBindingSource.DataMember = "calendar_dates.txt";
+            this._calendar_dates_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // fareidDataGridViewTextBoxColumn
             // 
@@ -1322,14 +1445,34 @@
             // paymentmethodDataGridViewTextBoxColumn
             // 
             this.paymentmethodDataGridViewTextBoxColumn.DataPropertyName = "payment_method";
+            this.paymentmethodDataGridViewTextBoxColumn.DataSource = this.payment_methodsBindingSource;
+            this.paymentmethodDataGridViewTextBoxColumn.DisplayMember = "Display";
             this.paymentmethodDataGridViewTextBoxColumn.HeaderText = "payment_method";
             this.paymentmethodDataGridViewTextBoxColumn.Name = "paymentmethodDataGridViewTextBoxColumn";
+            this.paymentmethodDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentmethodDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.paymentmethodDataGridViewTextBoxColumn.ValueMember = "Value";
+            // 
+            // payment_methodsBindingSource
+            // 
+            this.payment_methodsBindingSource.DataMember = "payment_method";
+            this.payment_methodsBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
             // transfersDataGridViewTextBoxColumn
             // 
             this.transfersDataGridViewTextBoxColumn.DataPropertyName = "transfers";
+            this.transfersDataGridViewTextBoxColumn.DataSource = this.transfersBindingSource;
+            this.transfersDataGridViewTextBoxColumn.DisplayMember = "Display";
             this.transfersDataGridViewTextBoxColumn.HeaderText = "transfers";
             this.transfersDataGridViewTextBoxColumn.Name = "transfersDataGridViewTextBoxColumn";
+            this.transfersDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.transfersDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.transfersDataGridViewTextBoxColumn.ValueMember = "Value";
+            // 
+            // transfersBindingSource
+            // 
+            this.transfersBindingSource.DataMember = "transfers";
+            this.transfersBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
             // transferdurationDataGridViewTextBoxColumn
             // 
@@ -1337,10 +1480,10 @@
             this.transferdurationDataGridViewTextBoxColumn.HeaderText = "transfer_duration";
             this.transferdurationDataGridViewTextBoxColumn.Name = "transferdurationDataGridViewTextBoxColumn";
             // 
-            // fare_attributesDindingSource
+            // _fare_attributes_txtDindingSource
             // 
-            this.fare_attributesDindingSource.DataMember = "fare_attributes.txt";
-            this.fare_attributesDindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._fare_attributes_txtDindingSource.DataMember = "fare_attributes.txt";
+            this._fare_attributes_txtDindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // fareidDataGridViewTextBoxColumn1
             // 
@@ -1351,8 +1494,13 @@
             // routeidDataGridViewTextBoxColumn1
             // 
             this.routeidDataGridViewTextBoxColumn1.DataPropertyName = "route_id";
+            this.routeidDataGridViewTextBoxColumn1.DataSource = this._routes_txtBindingSource;
+            this.routeidDataGridViewTextBoxColumn1.DisplayMember = "route_short_name";
             this.routeidDataGridViewTextBoxColumn1.HeaderText = "route_id";
             this.routeidDataGridViewTextBoxColumn1.Name = "routeidDataGridViewTextBoxColumn1";
+            this.routeidDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.routeidDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.routeidDataGridViewTextBoxColumn1.ValueMember = "route_id";
             // 
             // originidDataGridViewTextBoxColumn
             // 
@@ -1372,10 +1520,10 @@
             this.containsidDataGridViewTextBoxColumn.HeaderText = "contains_id";
             this.containsidDataGridViewTextBoxColumn.Name = "containsidDataGridViewTextBoxColumn";
             // 
-            // fare_rulesBindingSource
+            // _fare_rules_txtBindingSource
             // 
-            this.fare_rulesBindingSource.DataMember = "fare_rules.txt";
-            this.fare_rulesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._fare_rules_txtBindingSource.DataMember = "fare_rules.txt";
+            this._fare_rules_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // shapeidDataGridViewTextBoxColumn
             // 
@@ -1407,16 +1555,21 @@
             this.shapedisttraveledDataGridViewTextBoxColumn.HeaderText = "shape_dist_traveled";
             this.shapedisttraveledDataGridViewTextBoxColumn.Name = "shapedisttraveledDataGridViewTextBoxColumn";
             // 
-            // shapesBindingSource
+            // _shapes_txtBindingSource
             // 
-            this.shapesBindingSource.DataMember = "shapes.txt";
-            this.shapesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._shapes_txtBindingSource.DataMember = "shapes.txt";
+            this._shapes_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // tripidDataGridViewTextBoxColumn
             // 
             this.tripidDataGridViewTextBoxColumn.DataPropertyName = "trip_id";
+            this.tripidDataGridViewTextBoxColumn.DataSource = this._trips_txtBindingSource;
+            this.tripidDataGridViewTextBoxColumn.DisplayMember = "trip_id";
             this.tripidDataGridViewTextBoxColumn.HeaderText = "trip_id";
             this.tripidDataGridViewTextBoxColumn.Name = "tripidDataGridViewTextBoxColumn";
+            this.tripidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tripidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tripidDataGridViewTextBoxColumn.ValueMember = "trip_id";
             // 
             // starttimeDataGridViewTextBoxColumn
             // 
@@ -1442,39 +1595,64 @@
             this.exacttimesDataGridViewTextBoxColumn.HeaderText = "exact_times";
             this.exacttimesDataGridViewTextBoxColumn.Name = "exacttimesDataGridViewTextBoxColumn";
             // 
-            // frequenciesBindingSource
+            // _frequencies_txtBindingSource
             // 
-            this.frequenciesBindingSource.DataMember = "frequencies.txt";
-            this.frequenciesBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            this._frequencies_txtBindingSource.DataMember = "frequencies.txt";
+            this._frequencies_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            // 
+            // _transfers_txtBindingSource
+            // 
+            this._transfers_txtBindingSource.DataMember = "transfers.txt";
+            this._transfers_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            // 
+            // _feed_info_txtBindingSource
+            // 
+            this._feed_info_txtBindingSource.DataMember = "feed_info.txt";
+            this._feed_info_txtBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
+            // 
+            // transfer_typeBindingSource
+            // 
+            this.transfer_typeBindingSource.DataMember = "transfer_type";
+            this.transfer_typeBindingSource.DataSource = typeof(GTFSTools.IO.GTFSLookupTables);
             // 
             // fromstopidDataGridViewTextBoxColumn
             // 
             this.fromstopidDataGridViewTextBoxColumn.DataPropertyName = "from_stop_id";
+            this.fromstopidDataGridViewTextBoxColumn.DataSource = this._stops_txtBindingSource;
+            this.fromstopidDataGridViewTextBoxColumn.DisplayMember = "stop_name";
             this.fromstopidDataGridViewTextBoxColumn.HeaderText = "from_stop_id";
             this.fromstopidDataGridViewTextBoxColumn.Name = "fromstopidDataGridViewTextBoxColumn";
+            this.fromstopidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fromstopidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.fromstopidDataGridViewTextBoxColumn.ValueMember = "stop_id";
             // 
             // tostopidDataGridViewTextBoxColumn
             // 
             this.tostopidDataGridViewTextBoxColumn.DataPropertyName = "to_stop_id";
+            this.tostopidDataGridViewTextBoxColumn.DataSource = this._stops_txtBindingSource;
+            this.tostopidDataGridViewTextBoxColumn.DisplayMember = "stop_name";
             this.tostopidDataGridViewTextBoxColumn.HeaderText = "to_stop_id";
             this.tostopidDataGridViewTextBoxColumn.Name = "tostopidDataGridViewTextBoxColumn";
+            this.tostopidDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.tostopidDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.tostopidDataGridViewTextBoxColumn.ValueMember = "stop_id";
             // 
             // transfertypeDataGridViewTextBoxColumn
             // 
             this.transfertypeDataGridViewTextBoxColumn.DataPropertyName = "transfer_type";
+            this.transfertypeDataGridViewTextBoxColumn.DataSource = this.transfer_typeBindingSource;
+            this.transfertypeDataGridViewTextBoxColumn.DisplayMember = "Display";
             this.transfertypeDataGridViewTextBoxColumn.HeaderText = "transfer_type";
             this.transfertypeDataGridViewTextBoxColumn.Name = "transfertypeDataGridViewTextBoxColumn";
+            this.transfertypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.transfertypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.transfertypeDataGridViewTextBoxColumn.ValueMember = "Value";
             // 
             // mintransfertimeDataGridViewTextBoxColumn
             // 
             this.mintransfertimeDataGridViewTextBoxColumn.DataPropertyName = "min_transfer_time";
             this.mintransfertimeDataGridViewTextBoxColumn.HeaderText = "min_transfer_time";
             this.mintransfertimeDataGridViewTextBoxColumn.Name = "mintransfertimeDataGridViewTextBoxColumn";
-            // 
-            // transfersBindingSource
-            // 
-            this.transfersBindingSource.DataMember = "transfers.txt";
-            this.transfersBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
             // 
             // feedpublishernameDataGridViewTextBoxColumn
             // 
@@ -1491,8 +1669,13 @@
             // feedlangDataGridViewTextBoxColumn
             // 
             this.feedlangDataGridViewTextBoxColumn.DataPropertyName = "feed_lang";
+            this.feedlangDataGridViewTextBoxColumn.DataSource = this.languageBindingSource;
+            this.feedlangDataGridViewTextBoxColumn.DisplayMember = "English name of Language";
             this.feedlangDataGridViewTextBoxColumn.HeaderText = "feed_lang";
             this.feedlangDataGridViewTextBoxColumn.Name = "feedlangDataGridViewTextBoxColumn";
+            this.feedlangDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.feedlangDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.feedlangDataGridViewTextBoxColumn.ValueMember = "ISO 639-1 Code";
             // 
             // feedstartdateDataGridViewTextBoxColumn
             // 
@@ -1511,128 +1694,6 @@
             this.feedversionDataGridViewTextBoxColumn.DataPropertyName = "feed_version";
             this.feedversionDataGridViewTextBoxColumn.HeaderText = "feed_version";
             this.feedversionDataGridViewTextBoxColumn.Name = "feedversionDataGridViewTextBoxColumn";
-            // 
-            // feed_infoBindingSource
-            // 
-            this.feed_infoBindingSource.DataMember = "feed_info.txt";
-            this.feed_infoBindingSource.DataSource = typeof(GTFSTools.IO.GTFSDataSet);
-            // 
-            // routeidDataGridViewTextBoxColumn
-            // 
-            this.routeidDataGridViewTextBoxColumn.DataPropertyName = "route_id";
-            this.routeidDataGridViewTextBoxColumn.HeaderText = "route_id";
-            this.routeidDataGridViewTextBoxColumn.Name = "routeidDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "agency_id";
-            this.dataGridViewTextBoxColumn20.DataSource = this.agencyBindingSource;
-            this.dataGridViewTextBoxColumn20.DisplayMember = "agency_name";
-            this.dataGridViewTextBoxColumn20.HeaderText = "agency_id";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn20.ValueMember = "agency_id";
-            // 
-            // routeshortnameDataGridViewTextBoxColumn
-            // 
-            this.routeshortnameDataGridViewTextBoxColumn.DataPropertyName = "route_short_name";
-            this.routeshortnameDataGridViewTextBoxColumn.HeaderText = "route_short_name";
-            this.routeshortnameDataGridViewTextBoxColumn.Name = "routeshortnameDataGridViewTextBoxColumn";
-            // 
-            // routelongnameDataGridViewTextBoxColumn
-            // 
-            this.routelongnameDataGridViewTextBoxColumn.DataPropertyName = "route_long_name";
-            this.routelongnameDataGridViewTextBoxColumn.HeaderText = "route_long_name";
-            this.routelongnameDataGridViewTextBoxColumn.Name = "routelongnameDataGridViewTextBoxColumn";
-            // 
-            // routedescDataGridViewTextBoxColumn
-            // 
-            this.routedescDataGridViewTextBoxColumn.DataPropertyName = "route_desc";
-            this.routedescDataGridViewTextBoxColumn.HeaderText = "route_desc";
-            this.routedescDataGridViewTextBoxColumn.Name = "routedescDataGridViewTextBoxColumn";
-            // 
-            // routetypeDataGridViewTextBoxColumn
-            // 
-            this.routetypeDataGridViewTextBoxColumn.DataPropertyName = "route_type";
-            this.routetypeDataGridViewTextBoxColumn.DataSource = this.route_typesBindingSource;
-            this.routetypeDataGridViewTextBoxColumn.DisplayMember = "Display";
-            this.routetypeDataGridViewTextBoxColumn.HeaderText = "route_type";
-            this.routetypeDataGridViewTextBoxColumn.Name = "routetypeDataGridViewTextBoxColumn";
-            this.routetypeDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.routetypeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.routetypeDataGridViewTextBoxColumn.ValueMember = "Value";
-            // 
-            // routeurlDataGridViewTextBoxColumn
-            // 
-            this.routeurlDataGridViewTextBoxColumn.DataPropertyName = "route_url";
-            this.routeurlDataGridViewTextBoxColumn.HeaderText = "route_url";
-            this.routeurlDataGridViewTextBoxColumn.Name = "routeurlDataGridViewTextBoxColumn";
-            // 
-            // routecolorDataGridViewTextBoxColumn
-            // 
-            this.routecolorDataGridViewTextBoxColumn.DataPropertyName = "route_color";
-            this.routecolorDataGridViewTextBoxColumn.HeaderText = "route_color";
-            this.routecolorDataGridViewTextBoxColumn.Name = "routecolorDataGridViewTextBoxColumn";
-            // 
-            // routetextcolorDataGridViewTextBoxColumn
-            // 
-            this.routetextcolorDataGridViewTextBoxColumn.DataPropertyName = "route_text_color";
-            this.routetextcolorDataGridViewTextBoxColumn.HeaderText = "route_text_color";
-            this.routetextcolorDataGridViewTextBoxColumn.Name = "routetextcolorDataGridViewTextBoxColumn";
-            // 
-            // agencyidDataGridViewTextBoxColumn
-            // 
-            this.agencyidDataGridViewTextBoxColumn.DataPropertyName = "agency_id";
-            this.agencyidDataGridViewTextBoxColumn.HeaderText = "agency_id";
-            this.agencyidDataGridViewTextBoxColumn.Name = "agencyidDataGridViewTextBoxColumn";
-            // 
-            // agencynameDataGridViewTextBoxColumn
-            // 
-            this.agencynameDataGridViewTextBoxColumn.DataPropertyName = "agency_name";
-            this.agencynameDataGridViewTextBoxColumn.HeaderText = "agency_name";
-            this.agencynameDataGridViewTextBoxColumn.Name = "agencynameDataGridViewTextBoxColumn";
-            // 
-            // agencyurlDataGridViewTextBoxColumn
-            // 
-            this.agencyurlDataGridViewTextBoxColumn.DataPropertyName = "agency_url";
-            this.agencyurlDataGridViewTextBoxColumn.HeaderText = "agency_url";
-            this.agencyurlDataGridViewTextBoxColumn.Name = "agencyurlDataGridViewTextBoxColumn";
-            this.agencyurlDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // agencytimezoneDataGridViewTextBoxColumn
-            // 
-            this.agencytimezoneDataGridViewTextBoxColumn.DataPropertyName = "agency_timezone";
-            this.agencytimezoneDataGridViewTextBoxColumn.DataSource = this.time_zoneBindingSource;
-            this.agencytimezoneDataGridViewTextBoxColumn.DisplayMember = "TZ";
-            this.agencytimezoneDataGridViewTextBoxColumn.HeaderText = "agency_timezone";
-            this.agencytimezoneDataGridViewTextBoxColumn.Name = "agencytimezoneDataGridViewTextBoxColumn";
-            this.agencytimezoneDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.agencytimezoneDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.agencytimezoneDataGridViewTextBoxColumn.ValueMember = "TZ";
-            // 
-            // agencylangDataGridViewTextBoxColumn
-            // 
-            this.agencylangDataGridViewTextBoxColumn.DataPropertyName = "agency_lang";
-            this.agencylangDataGridViewTextBoxColumn.DataSource = this.languageBindingSource;
-            this.agencylangDataGridViewTextBoxColumn.DisplayMember = "English name of Language";
-            this.agencylangDataGridViewTextBoxColumn.HeaderText = "agency_lang";
-            this.agencylangDataGridViewTextBoxColumn.Name = "agencylangDataGridViewTextBoxColumn";
-            this.agencylangDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.agencylangDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.agencylangDataGridViewTextBoxColumn.ValueMember = "ISO 639-1 Code";
-            // 
-            // agencyphoneDataGridViewTextBoxColumn
-            // 
-            this.agencyphoneDataGridViewTextBoxColumn.DataPropertyName = "agency_phone";
-            this.agencyphoneDataGridViewTextBoxColumn.HeaderText = "agency_phone";
-            this.agencyphoneDataGridViewTextBoxColumn.Name = "agencyphoneDataGridViewTextBoxColumn";
-            // 
-            // agencyfareurlDataGridViewTextBoxColumn
-            // 
-            this.agencyfareurlDataGridViewTextBoxColumn.DataPropertyName = "agency_fare_url";
-            this.agencyfareurlDataGridViewTextBoxColumn.HeaderText = "agency_fare_url";
-            this.agencyfareurlDataGridViewTextBoxColumn.Name = "agencyfareurlDataGridViewTextBoxColumn";
             // 
             // Form1
             // 
@@ -1674,30 +1735,33 @@
             this.tabControl1.ResumeLayout(false);
             this.trips.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrips)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.route_typesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.time_zoneBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.languageBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agencyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._agency_txtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.location_typeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wheelchair_boardingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stopsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.routesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._stops_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.route_typesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._routes_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._calendar_txtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wheelchair_accessibleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bikes_allowedBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tripsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._trips_txtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickup_typeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drop_off_typeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stop_timesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._stop_times_txtBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exception_typeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calendar_dateBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fare_attributesDindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fare_rulesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shapesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._calendar_dates_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.payment_methodsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transfersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.feed_infoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._fare_attributes_txtDindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._fare_rules_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._shapes_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._frequencies_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._transfers_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._feed_info_txtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transfer_typeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1715,18 +1779,18 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportFolder;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportZip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportFolder;
-        private System.Windows.Forms.BindingSource agencyBindingSource;
-        private System.Windows.Forms.BindingSource stopsBindingSource;
-        private System.Windows.Forms.BindingSource routesBindingSource;
-        private System.Windows.Forms.BindingSource stop_timesBindingSource;
-        private System.Windows.Forms.BindingSource calendarBindingSource;
-        private System.Windows.Forms.BindingSource calendar_dateBindingSource;
-        private System.Windows.Forms.BindingSource fare_attributesDindingSource;
-        private System.Windows.Forms.BindingSource fare_rulesBindingSource;
-        private System.Windows.Forms.BindingSource shapesBindingSource;
-        private System.Windows.Forms.BindingSource frequenciesBindingSource;
-        private System.Windows.Forms.BindingSource transfersBindingSource;
-        private System.Windows.Forms.BindingSource feed_infoBindingSource;
+        private System.Windows.Forms.BindingSource _agency_txtBindingSource;
+        private System.Windows.Forms.BindingSource _stops_txtBindingSource;
+        private System.Windows.Forms.BindingSource _routes_txtBindingSource;
+        private System.Windows.Forms.BindingSource _stop_times_txtBindingSource;
+        private System.Windows.Forms.BindingSource _calendar_txtBindingSource;
+        private System.Windows.Forms.BindingSource _calendar_dates_txtBindingSource;
+        private System.Windows.Forms.BindingSource _fare_attributes_txtDindingSource;
+        private System.Windows.Forms.BindingSource _fare_rules_txtBindingSource;
+        private System.Windows.Forms.BindingSource _shapes_txtBindingSource;
+        private System.Windows.Forms.BindingSource _frequencies_txtBindingSource;
+        private System.Windows.Forms.BindingSource _transfers_txtBindingSource;
+        private System.Windows.Forms.BindingSource _feed_info_txtBindingSource;
         private System.Windows.Forms.BindingSource location_typeBindingSource;
         private System.Windows.Forms.BindingSource time_zoneBindingSource;
         private System.Windows.Forms.BindingSource languageBindingSource;
@@ -1737,11 +1801,6 @@
         private System.Windows.Forms.DataGridView dataGridViewTransfers;
         private System.Windows.Forms.TabPage frequencies;
         private System.Windows.Forms.DataGridView dataGridViewFrequencies;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tripidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn starttimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endtimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn headwaysecsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn exacttimesDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage shapes;
         private System.Windows.Forms.DataGridView dataGridViewShapes;
         private System.Windows.Forms.DataGridViewTextBoxColumn shapeidDataGridViewTextBoxColumn;
@@ -1751,19 +1810,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn shapedisttraveledDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage fare_rules;
         private System.Windows.Forms.DataGridView dataGridViewFareRules;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fareidDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn routeidDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn originidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinationidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn containsidDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage fare_attributes;
         private System.Windows.Forms.DataGridView dataGridViewFareAttributes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fareidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currencytypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paymentmethodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transfersDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transferdurationDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage calendar_dates;
         private System.Windows.Forms.DataGridView dataGridViewCalendarDates;
         private System.Windows.Forms.TabPage calendar;
@@ -1779,17 +1827,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage trips;
         private System.Windows.Forms.DataGridView dataGridViewTrips;
-        private System.Windows.Forms.BindingSource tripsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feedpublishernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feedpublisherurlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feedlangDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feedstartdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feedenddateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn feedversionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fromstopidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tostopidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn transfertypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mintransfertimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource _trips_txtBindingSource;
         private System.Windows.Forms.BindingSource pickup_typeBindingSource;
         private System.Windows.Forms.DataGridViewComboBoxColumn tripidDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn arrivaltimeDataGridViewTextBoxColumn;
@@ -1874,5 +1912,34 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn agencylangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agencyphoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn agencyfareurlDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource payment_methodsBindingSource;
+        private System.Windows.Forms.BindingSource transfersBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fareidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currencytypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn paymentmethodDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn transfersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn transferdurationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fareidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn routeidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn originidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinationidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn containsidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn tripidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn starttimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endtimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn headwaysecsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn exacttimesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource transfer_typeBindingSource;
+        private System.Windows.Forms.DataGridViewComboBoxColumn fromstopidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn tostopidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn transfertypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mintransfertimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feedpublishernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feedpublisherurlDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn feedlangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feedstartdateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feedenddateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn feedversionDataGridViewTextBoxColumn;
     }
 }
