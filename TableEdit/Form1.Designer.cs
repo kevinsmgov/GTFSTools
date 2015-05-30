@@ -36,12 +36,16 @@
             this.toolStripMenuItemImportFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemImportShapes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemImportShapesCSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportShapesSQLite = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportZip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportFolder = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportShapes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportShapeCSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExportShapesSQLite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExportStops = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExportStopsCSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExportStopsSQLite = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialogGTFS = new System.Windows.Forms.OpenFileDialog();
             this.feed_info = new System.Windows.Forms.TabPage();
@@ -188,9 +192,11 @@
             this.wheelchair_boardingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.saveFileDialogGTFS = new System.Windows.Forms.SaveFileDialog();
-            this.saveFileDialogShapes = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialogGIS = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogShapes = new System.Windows.Forms.OpenFileDialog();
-            this.toolStripMenuItemImportShapesSQLite = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportStops = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportStopsCSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemImportStopsSQLite = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.feed_info.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFeedInfo)).BeginInit();
@@ -269,7 +275,8 @@
             this.importToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemImportZip,
             this.toolStripMenuItemImportFolder,
-            this.toolStripMenuItemImportShapes});
+            this.toolStripMenuItemImportShapes,
+            this.toolStripMenuItemImportStops});
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
             this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.importToolStripMenuItem.Text = "&Import";
@@ -304,12 +311,20 @@
             this.toolStripMenuItemImportShapesCSV.Text = "CSV";
             this.toolStripMenuItemImportShapesCSV.Click += new System.EventHandler(this.toolStripMenuItemImportShapesCSV_Click);
             // 
+            // toolStripMenuItemImportShapesSQLite
+            // 
+            this.toolStripMenuItemImportShapesSQLite.Name = "toolStripMenuItemImportShapesSQLite";
+            this.toolStripMenuItemImportShapesSQLite.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemImportShapesSQLite.Text = "SQLite";
+            this.toolStripMenuItemImportShapesSQLite.Click += new System.EventHandler(this.toolStripMenuItemImportShapesSQLite_Click);
+            // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemExportZip,
             this.toolStripMenuItemExportFolder,
-            this.toolStripMenuItemExportShapes});
+            this.toolStripMenuItemExportShapes,
+            this.toolStripMenuItemExportStops});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportToolStripMenuItem.Text = "&Export";
@@ -317,14 +332,14 @@
             // toolStripMenuItemExportZip
             // 
             this.toolStripMenuItemExportZip.Name = "toolStripMenuItemExportZip";
-            this.toolStripMenuItemExportZip.Size = new System.Drawing.Size(111, 22);
+            this.toolStripMenuItemExportZip.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemExportZip.Text = "&Zip";
             this.toolStripMenuItemExportZip.Click += new System.EventHandler(this.toolStripMenuItemExportZip_Click);
             // 
             // toolStripMenuItemExportFolder
             // 
             this.toolStripMenuItemExportFolder.Name = "toolStripMenuItemExportFolder";
-            this.toolStripMenuItemExportFolder.Size = new System.Drawing.Size(111, 22);
+            this.toolStripMenuItemExportFolder.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemExportFolder.Text = "&Folder";
             this.toolStripMenuItemExportFolder.Click += new System.EventHandler(this.toolStripMenuItemExportFolder_Click);
             // 
@@ -334,7 +349,7 @@
             this.toolStripMenuItemExportShapeCSV,
             this.toolStripMenuItemExportShapesSQLite});
             this.toolStripMenuItemExportShapes.Name = "toolStripMenuItemExportShapes";
-            this.toolStripMenuItemExportShapes.Size = new System.Drawing.Size(111, 22);
+            this.toolStripMenuItemExportShapes.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemExportShapes.Text = "Shapes";
             // 
             // toolStripMenuItemExportShapeCSV
@@ -350,6 +365,28 @@
             this.toolStripMenuItemExportShapesSQLite.Size = new System.Drawing.Size(108, 22);
             this.toolStripMenuItemExportShapesSQLite.Text = "SQLite";
             this.toolStripMenuItemExportShapesSQLite.Click += new System.EventHandler(this.toolStripMenuItemExportShapesSQLite_Click);
+            // 
+            // toolStripMenuItemExportStops
+            // 
+            this.toolStripMenuItemExportStops.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemExportStopsCSV,
+            this.toolStripMenuItemExportStopsSQLite});
+            this.toolStripMenuItemExportStops.Name = "toolStripMenuItemExportStops";
+            this.toolStripMenuItemExportStops.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemExportStops.Text = "Stops";
+            // 
+            // toolStripMenuItemExportStopsCSV
+            // 
+            this.toolStripMenuItemExportStopsCSV.Name = "toolStripMenuItemExportStopsCSV";
+            this.toolStripMenuItemExportStopsCSV.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemExportStopsCSV.Text = "CSV";
+            this.toolStripMenuItemExportStopsCSV.Click += new System.EventHandler(this.toolStripMenuItemExportStopsCSV_Click);
+            // 
+            // toolStripMenuItemExportStopsSQLite
+            // 
+            this.toolStripMenuItemExportStopsSQLite.Name = "toolStripMenuItemExportStopsSQLite";
+            this.toolStripMenuItemExportStopsSQLite.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemExportStopsSQLite.Text = "SQLite";
             // 
             // exitToolStripMenuItem
             // 
@@ -1555,12 +1592,27 @@
             // 
             this.saveFileDialogGTFS.DefaultExt = "zip";
             // 
-            // toolStripMenuItemImportShapesSQLite
+            // toolStripMenuItemImportStops
             // 
-            this.toolStripMenuItemImportShapesSQLite.Name = "toolStripMenuItemImportShapesSQLite";
-            this.toolStripMenuItemImportShapesSQLite.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItemImportShapesSQLite.Text = "SQLite";
-            this.toolStripMenuItemImportShapesSQLite.Click += new System.EventHandler(this.toolStripMenuItemImportShapesSQLite_Click);
+            this.toolStripMenuItemImportStops.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemImportStopsCSV,
+            this.toolStripMenuItemImportStopsSQLite});
+            this.toolStripMenuItemImportStops.Name = "toolStripMenuItemImportStops";
+            this.toolStripMenuItemImportStops.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemImportStops.Text = "Stops";
+            // 
+            // toolStripMenuItemImportStopsCSV
+            // 
+            this.toolStripMenuItemImportStopsCSV.Name = "toolStripMenuItemImportStopsCSV";
+            this.toolStripMenuItemImportStopsCSV.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemImportStopsCSV.Text = "CSV";
+            this.toolStripMenuItemImportStopsCSV.Click += new System.EventHandler(this.toolStripMenuItemImportStopsCSV_Click);
+            // 
+            // toolStripMenuItemImportStopsSQLite
+            // 
+            this.toolStripMenuItemImportStopsSQLite.Name = "toolStripMenuItemImportStopsSQLite";
+            this.toolStripMenuItemImportStopsSQLite.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItemImportStopsSQLite.Text = "SQLite";
             // 
             // Form1
             // 
@@ -1788,11 +1840,17 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialogGTFS;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportShapes;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportShapes;
-        private System.Windows.Forms.SaveFileDialog saveFileDialogShapes;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogGIS;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportShapeCSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportShapesCSV;
         private System.Windows.Forms.OpenFileDialog openFileDialogShapes;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportShapesSQLite;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportShapesSQLite;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportStops;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportStopsCSV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportStopsSQLite;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportStops;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportStopsCSV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemImportStopsSQLite;
     }
 }

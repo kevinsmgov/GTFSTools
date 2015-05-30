@@ -137,9 +137,9 @@ namespace TableEdit
 
         private void toolStripMenuItemExportShapesCSV_Click(object sender, EventArgs e)
         {
-            saveFileDialogShapes.DefaultExt = "csv";
-            saveFileDialogShapes.Filter = "Well Known Text|*.csv";
-            var result = saveFileDialogShapes.ShowDialog();
+            saveFileDialogGIS.DefaultExt = "csv";
+            saveFileDialogGIS.Filter = "Well Known Text|*.csv";
+            var result = saveFileDialogGIS.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 var previousCursor = this.Cursor;
@@ -147,7 +147,7 @@ namespace TableEdit
                 var shapes = new GTFSTools.GIS.Shapes(gtfs.DataSet._shapes_txt);
                 try
                 {
-                    using (var stream = System.IO.File.Create(saveFileDialogShapes.FileName))
+                    using (var stream = System.IO.File.Create(saveFileDialogGIS.FileName))
                     {
                         GTFSTools.IO.Extensions.WriteCSV(shapes.DataTable, stream);
                     }
@@ -155,7 +155,6 @@ namespace TableEdit
                 catch (Exception exception)
                 {
                     MessageBox.Show(exception.Message, "Export Error", MessageBoxButtons.OK);
-
                 }
                 this.Cursor = previousCursor;
             }
@@ -184,9 +183,9 @@ namespace TableEdit
         private void toolStripMenuItemExportShapesSQLite_Click(object sender, EventArgs e)
         {
             
-            saveFileDialogShapes.DefaultExt = "sqlite";
-            saveFileDialogShapes.Filter = "SQLite|*.sqlite";
-            var result = saveFileDialogShapes.ShowDialog();
+            saveFileDialogGIS.DefaultExt = "sqlite";
+            saveFileDialogGIS.Filter = "SQLite|*.sqlite";
+            var result = saveFileDialogGIS.ShowDialog();
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 var previousCursor = this.Cursor;
@@ -194,7 +193,7 @@ namespace TableEdit
                 var shapes = new GTFSTools.GIS.Shapes(gtfs.DataSet._shapes_txt);
                 try
                 {
-                    shapes.ToSQLite(saveFileDialogShapes.FileName);
+                    shapes.ToSQLite(saveFileDialogGIS.FileName);
                 }
                 catch (Exception exception)
                 {
@@ -225,6 +224,50 @@ namespace TableEdit
                 {
                     MessageBox.Show(exception.Message, "Import Error", MessageBoxButtons.OK);
                 }
+                this.Cursor = previousCursor;
+            }
+        }
+
+        private void toolStripMenuItemExportStopsCSV_Click(object sender, EventArgs e)
+        {
+            saveFileDialogGIS.DefaultExt = "csv";
+            saveFileDialogGIS.Filter = "Well Known Text|*.csv";
+            var result = saveFileDialogGIS.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var stops = new GTFSTools.GIS.Stops(gtfs.DataSet._stops_txt);
+                try
+                {
+                    using (var stream = System.IO.File.Create(saveFileDialogGIS.FileName))
+                    {
+                        GTFSTools.IO.Extensions.WriteCSV(stops.DataTable, stream);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Export Error", MessageBoxButtons.OK);
+                }
+                this.Cursor = previousCursor;
+            }
+        }
+        private void toolStripMenuItemImportStopsCSV_Click(object sender, EventArgs e)
+        {
+            openFileDialogShapes.DefaultExt = "csv";
+            openFileDialogShapes.Filter = "Well Known Text|*.csv";
+            var result = openFileDialogShapes.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var stops = new GTFSTools.GIS.Stops();
+                using (var stream = System.IO.File.OpenRead(openFileDialogShapes.FileName))
+                {
+                    GTFSTools.IO.Extensions.ReadCSV(stops.DataTable, stream);
+                }
+                stops.Update(gtfs.DataSet._stops_txt);
+                BindDataGridViews();
                 this.Cursor = previousCursor;
             }
         }
