@@ -55,7 +55,7 @@ namespace GTFSTools.GIS
         }
         public void ToSQLite(String FileName)
         {
-            GTFSTools.GIS.SQLite.CreateFile(DataTable, FileName);
+            GTFSTools.GIS.SQLite.CreateFile(DataTable, FileName, GeometryType.LineString);
         }
         public void FromSQLite(String FileName)
         {

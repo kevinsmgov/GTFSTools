@@ -61,5 +61,13 @@ namespace GTFSTools.GIS
                 _stops_txt.Add_stops_txtRow(_stops_txtRow);
             }
         }
+        public void ToSQLite(String FileName)
+        {
+            GTFSTools.GIS.SQLite.CreateFile(DataTable, FileName, GeometryType.Point);
+        }
+        public void FromSQLite(String FileName)
+        {
+            GTFSTools.GIS.SQLite.ReadFile(DataTable, FileName);
+        }
     }
 }

@@ -271,5 +271,51 @@ namespace TableEdit
                 this.Cursor = previousCursor;
             }
         }
+        private void toolStripMenuItemExportStopsSQLite_Click(object sender, EventArgs e)
+        {
+
+            saveFileDialogGIS.DefaultExt = "sqlite";
+            saveFileDialogGIS.Filter = "SQLite|*.sqlite";
+            var result = saveFileDialogGIS.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var stops = new GTFSTools.GIS.Stops(gtfs.DataSet._stops_txt);
+                try
+                {
+                    stops.ToSQLite(saveFileDialogGIS.FileName);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Export Error", MessageBoxButtons.OK);
+                }
+                this.Cursor = previousCursor;
+            }
+        }
+
+        private void toolStripMenuItemImportStopsSQLite_Click(object sender, EventArgs e)
+        {
+            openFileDialogShapes.DefaultExt = "sqlite";
+            openFileDialogShapes.Filter = "SQLite|*.sqlite";
+            var result = openFileDialogShapes.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                var previousCursor = this.Cursor;
+                this.Cursor = Cursors.WaitCursor;
+                var stops = new GTFSTools.GIS.Stops();
+                try
+                {
+                    stops.FromSQLite(openFileDialogShapes.FileName);
+                    stops.Update(gtfs.DataSet._stops_txt);
+                    BindDataGridViews();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message, "Import Error", MessageBoxButtons.OK);
+                }
+                this.Cursor = previousCursor;
+            }
+        }
     }
 }

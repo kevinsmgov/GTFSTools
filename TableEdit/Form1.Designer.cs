@@ -387,6 +387,7 @@
             this.toolStripMenuItemExportStopsSQLite.Name = "toolStripMenuItemExportStopsSQLite";
             this.toolStripMenuItemExportStopsSQLite.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemExportStopsSQLite.Text = "SQLite";
+            this.toolStripMenuItemExportStopsSQLite.Click += new System.EventHandler(this.toolStripMenuItemExportStopsSQLite_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -1613,6 +1614,7 @@
             this.toolStripMenuItemImportStopsSQLite.Name = "toolStripMenuItemImportStopsSQLite";
             this.toolStripMenuItemImportStopsSQLite.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItemImportStopsSQLite.Text = "SQLite";
+            this.toolStripMenuItemImportStopsSQLite.Click += new System.EventHandler(this.toolStripMenuItemImportStopsSQLite_Click);
             // 
             // Form1
             // 
